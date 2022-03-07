@@ -1,0 +1,86 @@
+$header_footer_height: 80px;
+
+.box { border: 1px solid black}
+
+.logo {
+  height: 5rem;
+  width: 15rem;
+  // margin: 0.25em;
+}
+
+.Header { 
+  position: fixed;
+  width: 100vw;
+  background-color: rgb(164, 255, 164);
+  height: $header_footer_height;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar_elements {
+  list-style-type: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2rem;
+
+  li {
+    margin-right: 1rem;
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+  }
+
+}
+
+.section {
+  height: calc(100vh - $header_footer_height);
+
+  padding-top: $header_footer_height;
+  scroll-behavior: smooth;
+  scroll-snap-align: start;
+
+}
+
+
+.Home { 
+  background-color: aqua; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .hours {
+
+    margin: 1rem;
+    width: 100%;
+    .hour_grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+    }
+
+
+  }
+
+
+}
+.Menu { background-color: rgb(0, 47, 255); }
+.Contact { background-color: rgb(212, 0, 255); 
+
+  height: calc(100vh - $header_footer_height - $header_footer_height);
+}
+
+.Footer { 
+  background-color: rgb(204, 191, 5);
+  height: $header_footer_height;
+}
+
+// . {
+//   display: flex;
+//   justify-content: space-between;
+// }
