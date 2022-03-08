@@ -137,4 +137,4 @@ const locations = [
     },
 ]
 
-export default {menu, locations}
+export default { menu, locations }

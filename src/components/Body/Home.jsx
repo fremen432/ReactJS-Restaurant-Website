@@ -1,4 +1,6 @@
 import './Body.scss'
+// import locations from '../../Data'
+
 
 export default function Home() {
   return (
@@ -7,7 +9,25 @@ export default function Home() {
         <div><h2>Central Texas Vietnamese Food & Asian Fusion</h2></div>
       <div className="description" >
         <div className="locations hours" >
-          <div className="hour_grid" ><span>Belterra: </span><a href="tel:+5555555555">512-531-9506</a></div>
+          {/* {console.log(locations)}
+          {locations.forEach(element => {
+            console.log('first')
+            {locations.map(el => {
+              <div className="hour_grid">
+                <span>{el.name}</span>
+                <a href="">{el.phone}</a>
+              </div>
+            })}
+          })}
+          <div className="hour_grid" >
+            <span>{locations[0].name}: </span>
+            <div>
+              <a href={'tel:+' + locations[0].phone}>{locations[0].phone}</a>
+              <span>{locations[0].address}</span>
+
+            </div>
+
+          </div> */}
           <div className="hour_grid" ><span>Bee Cave: </span><a href="tel:+5555555555">512-263-8889</a></div>
           <div className="hour_grid" ><span>Marble Falls: </span><a href="tel:+5555555555">830-220-5013</a></div>
         </div>
