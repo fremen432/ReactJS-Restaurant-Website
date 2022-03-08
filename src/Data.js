@@ -123,17 +123,20 @@ const locations = [
     {
         name: 'Belterra',
         phone: '555-555-5550',
-        address: '164 Belterra Village Way Austin, Texas 78737'
+        address: '164 Belterra Village Way Austin, Texas 78737',
+        email: 'simplyPho@exampleEmail.com'
     },
     {
         name: 'Bee Cave',
         phone: '555-555-5551',
-        address: '12913 Galleria Cir Ste. 101, Austin, TX 78738'
+        address: '12913 Galleria Cir Ste. 101, Austin, TX 78738',
+        email: 'simplyPho@exampleEmail.com'
     },
     {
         name: 'Marble Falls',
         phone: '555-555-5552',
-        address: '101 US-281, Marble Falls, TX 78654'
+        address: '101 US-281, Marble Falls, TX 78654',
+        email: 'simplyPho@exampleEmail.com'
     },
 ]
 

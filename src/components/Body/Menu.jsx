@@ -29,7 +29,7 @@ export default function Menu() {
       {/* Menu Categories */}
       <div className="menu_categories grid grid-cols-2">
         
-        {/*  */}
+        {/* Returns h1 with all category and respective menu items inside */}
         {sortedMenu.map(arr => 
           <div className="menu_category box m-2">
             <h2 className="box text-center">{arr[0].category}</h2>
