@@ -73,6 +73,7 @@ const menu = [
         name: 'Pho Combination',
         description: 'Beef Noodle Soup with Lean Brisket, sliced raw Rib Eye Steak & Pork Meatballs',
         category:'Noodle Soup – Pho',
+        price: '',
         price_small: '12.00',
         price_large: '13.00',
         extra_description: ''
@@ -81,6 +82,7 @@ const menu = [
         name: 'Pho Rib Eyes (Gluten Free)',
         description: 'Beef Noodle Soup with sliced raw Rib Eye Steak',
         category:'Noodle Soup – Pho',
+        price: '',
         price_small: '12.00',
         price_large: '13.00',
         extra_description: ''
@@ -89,6 +91,7 @@ const menu = [
         name: 'Pho Brisket (Gluten Free)',
         description: 'Beef Noodle Soup with sliced Lean Briskets',
         category:'Noodle Soup – Pho',
+        price: '',
         price_small: '11.50',
         price_large: '12.50',
         extra_description: ''
@@ -116,5 +119,22 @@ const menu = [
     },
 ]
 
-// module.exports menu
-export default menu
+const locations = [
+    {
+        name: 'Belterra',
+        phone: '555-555-5550',
+        address: '164 Belterra Village Way Austin, Texas 78737'
+    },
+    {
+        name: 'Bee Cave',
+        phone: '555-555-5551',
+        address: '12913 Galleria Cir Ste. 101, Austin, TX 78738'
+    },
+    {
+        name: 'Marble Falls',
+        phone: '555-555-5552',
+        address: '101 US-281, Marble Falls, TX 78654'
+    },
+]
+
+export default {menu, locations}

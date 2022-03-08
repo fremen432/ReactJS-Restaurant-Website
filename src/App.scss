@@ -11,7 +11,7 @@ $header_footer_height: 80px;
 .Header { 
   position: fixed;
   width: 100vw;
-  background-color: rgb(164, 255, 164);
+  background-color: rgb(160, 255, 160);
   height: $header_footer_height;
 
   display: flex;
@@ -34,16 +34,13 @@ $header_footer_height: 80px;
       text-decoration: none;
     }
   }
-
 }
 
 .section {
-  height: calc(100vh - $header_footer_height);
-
+  min-height: 100vh;
   padding-top: $header_footer_height;
   scroll-behavior: smooth;
   scroll-snap-align: start;
-
 }
 
 
@@ -55,32 +52,22 @@ $header_footer_height: 80px;
   flex-direction: column;
 
   .hours {
-
     margin: 1rem;
     width: 100%;
+
     .hour_grid {
-        display: grid;
-        grid-template-columns: 50% 50%;
-
+      display: grid;
+      grid-template-columns: 50% 50%;
     }
-
-
   }
-
-
 }
-.Menu { background-color: rgb(0, 47, 255); }
-.Contact { background-color: rgb(212, 0, 255); 
+.Menu { background-color: rgb(160, 233, 255); }
 
+.Contact { background-color: rgb(236, 161, 255); 
   height: calc(100vh - $header_footer_height - $header_footer_height);
 }
 
 .Footer { 
-  background-color: rgb(204, 191, 5);
+  background-color: rgb(255, 247, 132);
   height: $header_footer_height;
 }
-
-// . {
-//   display: flex;
-//   justify-content: space-between;
-// }
