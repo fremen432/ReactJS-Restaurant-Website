@@ -1,5 +1,5 @@
-import React from 'react'
-import data from '../../Data'
+import data from '../../../../Data'
+
 const menu = data.menu
 
 const sortMenu = arr => {

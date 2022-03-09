@@ -1,7 +1,3 @@
-import './Body.scss'
-// import locations from '../../Data'
-
-
 export default function Home() {
   return (
     <div id="Home" className="Home section">
@@ -28,6 +24,7 @@ export default function Home() {
             </div>
 
           </div> */}
+          <div className="hour_grid" ><span>Dripping Springs: </span><a href="tel:+5555555555">555-555-5555</a></div>
           <div className="hour_grid" ><span>Bee Cave: </span><a href="tel:+5555555555">512-263-8889</a></div>
           <div className="hour_grid" ><span>Marble Falls: </span><a href="tel:+5555555555">830-220-5013</a></div>
         </div>

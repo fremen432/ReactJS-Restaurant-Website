@@ -1,17 +1,34 @@
-import logo from './logo.svg';
 import './App.scss';
-// import tailwindcss from 'tailwindcss';
 
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import Body from './components/Body/Body';
+// import Router from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { useState } from 'react';
+
+
+//  Page imports
+import Homepage from './pages/HomePage/HomePage';
+import OrderPage from './pages/OrderPage/OrderPage';
 
 function App() {
+
+  const [cartItems, setCartItems] = useState([]);
+
   return (
     <div className="App">
-      <Header/>
-      <Body/>
-      <Footer/>
+
+      {/* <Homepage/> */}
+      <OrderPage countCartItems={cartItems.length}/>
+
+
+      {/* <Router>
+        <Switch>
+          <Route exact path='/' component={Homepage}/>
+
+        </Switch>
+
+
+      </Router> */}
+
     </div>
   );
 }
