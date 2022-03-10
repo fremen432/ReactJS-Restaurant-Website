@@ -23,10 +23,7 @@ function App() {
       {/* <Router>
         <Switch>
           <Route exact path='/' component={Homepage}/>
-
         </Switch>
-
-
       </Router> */}
 
     </div>

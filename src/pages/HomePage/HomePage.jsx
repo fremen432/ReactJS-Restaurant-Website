@@ -4,10 +4,12 @@ import Footer from './components/Footer/Footer';
 
 const HomePage = () => {
     return (
-        <div className="">
+        <div className="app">
             <Header />
-            <Body />
-            <Footer />        
+            <div className="body_footer_wrapper ">
+                <Body />
+                <Footer />
+            </div>
         </div>
     )
 }

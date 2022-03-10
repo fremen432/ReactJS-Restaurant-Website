@@ -8,10 +8,12 @@ export default function Cart(props) {
     const taxPrice = itemsPrice * 0.14;
     const shippingPrice = itemsPrice > 2000 ? 0 : 20;
     const totalPrice = itemsPrice + taxPrice + shippingPrice;
-    
+
     return (
     <div id="Cart" className="box Cart section mx-2">
-      <div id="items_header" className="flex justify-center header_1">
+
+        {/* Header */}
+      <div id="cart_header" className="items_header flex justify-center header_1">
         {cartItems.length === 0 ? 
         <div>Cart is empty</div> : 
         <>
@@ -23,8 +25,8 @@ export default function Cart(props) {
         </>}
       </div>
 
-      {/* Menu Categories */}
-      <div className="cart_items">
+      {/* Cart Items */}
+      <div id="cart_items_container" className="cart_items_container">
         {cartItems.map((item) => (
             <div key={item.id} className="cart_item box">
                 <div className="col-2">{item.name}</div>
@@ -44,8 +46,9 @@ export default function Cart(props) {
         ))}
       </div>
 
+        {/* Total price */}
       {cartItems.length !== 0 && (
-          <>
+          <div id="cart_total" className="w-full ">
             <hr></hr>
             <div className="row">
               <div className="col-2">Items Price</div>
@@ -80,7 +83,7 @@ export default function Cart(props) {
                 Checkout
               </button>
             </div>
-          </>
+          </div>
         )}
 
     </div>

@@ -2,109 +2,136 @@ $header_footer_height: 80px;
 
 $topBar_color: rgb(160, 255, 160);
 $text_color1: rgb(46, 134, 46);
+.cbm-green { background-color: rgb(160, 255, 160); }
 
 .box { border: 1px solid black}
 
-.logo {
-  height: 5rem;
-  width: 15rem;
-  // margin: 0.25em;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.Header {
-  position: fixed;
-  width: 100vw;
-  background-color: $topBar_color;
-  height: $header_footer_height;
-
-  display: flex;
-  justify-content: space-between;
-
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.65);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 10px 10px;
-    z-index: 1;
-  }
-  .dropdown-location:hover {
-    background-color: rgba(123, 251, 255, 0.65);
-  }
-  .dropdown:hover .dropdown-content {
-    display: block;
-
-  }
-
-}
-
-.navbar_elements {
-  list-style-type: none;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 2rem;
-
-  li {
-    margin-right: 1rem;
-
-    a {
-      color: black;
-      text-decoration: none;
+.app {
+  .Header {
+    // position:fixed;
+    width: 100vw;
+    background-color: $topBar_color;
+    height: $header_footer_height;
+  
+    display: flex;
+    justify-content: space-between;
+  
+    .logo {
+      height: 5rem;
+      width: 15rem;
+      // margin: 0.25em;
+    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .navbar_elements {
+      list-style-type: none;
+    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 2rem;
+    
+      li {
+        margin-right: 1rem;
+    
+        a {
+          color: black;
+          text-decoration: none;
+        }
+      }
+    }
+  
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.65);
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      padding: 10px 10px;
+      z-index: 1;
+    }
+    .dropdown-location:hover {
+      background-color: rgba(123, 251, 255, 0.65);
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+  
     }
   }
-}
-
-.section {
-  min-height: 100vh;
-  padding-top: $header_footer_height;
-  scroll-behavior: smooth;
-  scroll-snap-align: start;
-}
-
-#Contact {
-  min-height: calc(100vh - $header_footer_height)
-}
-
-.Home { 
-  background-color: aqua; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  .hours {
-    margin: 1rem;
-    width: 100%;
-
-    .hour_grid {
-      display: grid;
-      grid-template-columns: 50% 50%;
+  .body_footer_wrapper {
+    max-height: calc(100vh - $header_footer_height);
+    overflow-y: auto;
+  
+    .Body {
+      .section {
+        // min-height: 100vh;
+        // padding-top: $header_footer_height;
+        scroll-behavior: smooth;
+        scroll-snap-align: start;
+      }
+  
+      .Home { 
+        background-color: aqua; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      
+        .hours {
+          margin: 1rem;
+          width: 100%;
+      
+          .hour_grid {
+            display: grid;
+            grid-template-columns: 50% 50%;
+          }
+        }
+      }
+      .Menu { background-color: rgb(160, 233, 255); }
+      .Contact { background-color: rgb(236, 161, 255); 
+        height: calc(100vh - $header_footer_height - $header_footer_height);
+      }
+      #Contact {
+        // min-height: calc(100vh - $header_footer_height)
+      }
+      
     }
+    .Footer { 
+      background-color: rgb(255, 247, 132);
+      height: $header_footer_height;
+    }
+    
   }
 }
-.Menu { background-color: rgb(160, 233, 255); }
-.Cart { background-color: rgb(255, 182, 182); }
 
-.Contact { background-color: rgb(236, 161, 255); 
-  height: calc(100vh - $header_footer_height - $header_footer_height);
-}
-.cbm-green { background-color: rgb(160, 255, 160); }
+.Cart { 
+  background-color: rgb(255, 182, 182); 
+  height: 100vh;
+  overflow-y: auto;
 
-.Footer { 
-  background-color: rgb(255, 247, 132);
-  height: $header_footer_height;
+  #cart_header {
+    background-color: rgb(0, 255, 242);
+  }
+
+  #cart_items_container {
+    background-color: rgb(9, 255, 0);
+
+  }
+
+  #cart_total {
+    background-color: rgb(255, 238, 0);
+    // position: absolute;
+  }
+
 }
+
 
 .order_btn {
   background-color: cyan;
@@ -121,6 +148,10 @@ $text_color1: rgb(46, 134, 46);
   font-weight: bold;
 }
 
-.header_1 {
-  background-color: chartreuse;
+// .header_1 {
+//   background-color: chartreuse;
+// }
+
+.cart_items {
+
 }
