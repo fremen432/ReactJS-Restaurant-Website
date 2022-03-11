@@ -6,16 +6,16 @@ export default function Body(props) {
   const { products, cartItems, onAdd, onRemove } = props;
 
   return (
-    <div id="SECTION__Body" className="OrderPage_Body grid grid-cols-3">
-        <Menu 
-        products={products} 
+    <div id="SECTION__Body" className="OrderPage_Body sm:grid sm:grid-cols-3">
+      <Menu
+        products={products}
         onAdd={onAdd}
-        />
-        <Cart 
+      />
+      <Cart
         cartItems={cartItems}
         onAdd={onAdd}
         onRemove={onRemove}
-        />
+      />
     </div>
   )
 }

@@ -16,8 +16,8 @@ function App() {
   return (
     <div className="App">
 
-      {/* <Homepage/> */}
-      <OrderPage countCartItems={cartItems.length}/>
+      <Homepage />
+      {/* <OrderPage countCartItems={cartItems.length}/> */}
 
 
       {/* <Router>
