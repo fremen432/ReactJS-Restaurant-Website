@@ -7,11 +7,11 @@ const fieldset_classes = 'my-1'
 
 export default function Contact() {
   return (
-    <div id="Contact" className="section Contact flex items-center flex-col">
+    <div id="Contact" className="Contact flex items-center flex-col">
       <h1 className="text-center">Contact Us</h1>
       <span>Email us at: {locations[0].email}</span>
 
-      <div class="container">  
+      <div class="container">
         <form id="contact" action="" method="post" className="box">
           {/* <h3>Quick Contact</h3> */}
           <h4>Send us a message we'll reply with in 24 hours!</h4>

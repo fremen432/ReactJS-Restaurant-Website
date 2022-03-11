@@ -86,7 +86,7 @@ $green_light3: rgb(210, 255, 210);
   
     .Body {
       .section {
-        // min-height: 100vh;
+        min-height: $relativeVH;
         // padding-top: $header_footer_height;
         scroll-behavior: smooth;
         scroll-snap-align: start;
