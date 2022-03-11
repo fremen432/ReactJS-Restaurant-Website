@@ -1,9 +1,6 @@
 import './App.scss';
 
-// import Router from 'react-router-dom'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { useState } from 'react';
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 //  Page imports
 import Homepage from './pages/HomePage/HomePage';
@@ -11,21 +8,14 @@ import OrderPage from './pages/OrderPage/OrderPage';
 
 function App() {
 
-  const [cartItems, setCartItems] = useState([]);
-
   return (
     <div className="App">
-
-      <Homepage />
-      {/* <OrderPage countCartItems={cartItems.length}/> */}
-
-
-      {/* <Router>
-        <Switch>
-          <Route exact path='/' component={Homepage}/>
-        </Switch>
-      </Router> */}
-
+      <Router>
+        <Routes>
+          <Route exact path='/' element={<Homepage />} />
+          <Route exact path='/order' element={<OrderPage />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

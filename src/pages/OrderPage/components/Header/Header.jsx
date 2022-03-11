@@ -11,7 +11,7 @@ export default function Header(props) {
     return (
         <div id="SECTION__Header" className=" OrderPage_Header Header box flex justify-between cbm-green">
             <div className="logo">
-                <a href="#Home">
+                <a href="/">
                     <img className="" src="assets/Simply-Pho-House.png" alt="restaurant logo" />
                 </a>
             </div>
