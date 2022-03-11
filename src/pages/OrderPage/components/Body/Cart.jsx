@@ -1,7 +1,4 @@
-import data from '../../../../Data'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
-
-// function display
 
 export default function Cart(props) {
     const { cartItems, onAdd, onRemove } = props;

@@ -126,6 +126,18 @@ $green_light3: rgb(210, 255, 210);
   }
 }
 
+.OrderPage_Header {
+
+
+  .OrderPage_Header_RightIcon {
+    background-color: $green_light3;
+
+    .ItemCount_span {
+      background-color: black;
+      color: white;
+    }
+  }
+}
 
 .OrderPage_Body {
   // $OrderPage_Cart_Total_height: ;
