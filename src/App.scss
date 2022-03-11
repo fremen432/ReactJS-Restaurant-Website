@@ -2,15 +2,30 @@ $header_footer_height: 80px;
 
 $topBar_color: rgb(160, 255, 160);
 $text_color1: rgb(46, 134, 46);
+$relativeVH: calc(100vh - $header_footer_height);
+
+$green_dark1: rgb(0, 71, 0);
+$green_dark2: rgb(0, 117, 0);
+$green_dark3: rgb(1, 163, 1);
+
+$green_light1: rgb(0, 255, 0);
+$green_light2: rgb(140, 255, 140);
+$green_light3: rgb(210, 255, 210);
+
 .cbm-green { background-color: rgb(160, 255, 160); }
 
 .box { border: 1px solid black}
+.box2 { border: 2px solid black}
 
 .app {
+
+  background-color: $green_light3;
   .Header {
     // position:fixed;
+    // background-color: $topBar_color;
+    background-color: $green_light2;
+
     width: 100vw;
-    background-color: $topBar_color;
     height: $header_footer_height;
   
     display: flex;
@@ -111,25 +126,52 @@ $text_color1: rgb(46, 134, 46);
   }
 }
 
-.Cart { 
-  background-color: rgb(255, 182, 182); 
-  height: 100vh;
-  overflow-y: auto;
 
-  #cart_header {
-    background-color: rgb(0, 255, 242);
-  }
-
-  #cart_items_container {
-    background-color: rgb(9, 255, 0);
+.OrderPage_Body {
+  // $OrderPage_Cart_Total_height: ;
+  .OrderPage_Menu { 
+    background-color: rgb(160, 233, 255); 
 
   }
 
-  #cart_total {
-    background-color: rgb(255, 238, 0);
-    // position: absolute;
-  }
+  .OrderPage_Cart { 
+    background-color: rgb(255, 182, 182); 
+    height: $relativeVH;
+    // position: sticky;
+    // overflow-y: auto;
 
+    .OrderPage_Cart_Header {
+      background-color: rgb(0, 255, 242);
+    }
+  
+    .OrderPage_Cart_Items {
+      background-color: rgb(4, 131, 0);
+      overflow-y: auto;
+
+      .Cart_Item {
+        margin: .5rem;
+        background-color: rgb(9, 255, 0);
+      }
+  
+    }
+  
+    .OrderPage_Cart_Total {
+      background-color: rgb(255, 249, 167);
+      // position: absolute;
+
+      // .Total_Price_el {
+      //   display: grid;
+      // }
+
+      .Total_Price { background-color: rgb(255, 238, 0);
+      border: 2px solid black
+      }
+      .Total_Btn {
+        background-color: rgb(209, 130, 146);
+      }
+    }
+  
+  }
 }
 
 
@@ -148,10 +190,40 @@ $text_color1: rgb(46, 134, 46);
   font-weight: bold;
 }
 
-// .header_1 {
-//   background-color: chartreuse;
+// .cart_items {
+
 // }
 
-.cart_items {
+// Break Points: 
+// Laptop L:  1440px
+// Laptop:    1024px
+// Tablet:    768px
+// Mobile L:  425px
+// Mobile M:  375px
+// Mobile S:  320px
 
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .example {background: red;}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {background: green;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example {background: blue;}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example {background: orange;}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example {background: pink;}
 }

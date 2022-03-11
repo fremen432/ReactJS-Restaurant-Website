@@ -43,14 +43,12 @@ export default function Body() {
   };
 
   return (
-    <div id="SECTION__Body" className="Body grid grid-cols-3 ">
+    <div id="SECTION__Body" className="OrderPage_Body grid grid-cols-3">
         <Menu 
-        className=""
         products={products} 
         onAdd={onAdd}
         />
         <Cart 
-        className="" 
         cartItems={cartItems}
         onAdd={onAdd}
         onRemove={onRemove}

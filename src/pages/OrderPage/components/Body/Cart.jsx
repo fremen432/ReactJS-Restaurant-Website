@@ -1,6 +1,8 @@
 import data from '../../../../Data'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 
+// function display
+
 export default function Cart(props) {
     const { cartItems, onAdd, onRemove } = props;
 
@@ -10,10 +12,10 @@ export default function Cart(props) {
     const totalPrice = itemsPrice + taxPrice + shippingPrice;
 
     return (
-    <div id="Cart" className="box Cart section mx-2">
+    <div id="OrderPage_Cart" className="box OrderPage_Cart section flex flex-col m-4 ml-0 rounded-xl" >
 
-        {/* Header */}
-      <div id="cart_header" className="items_header flex justify-center header_1">
+        {/* Cart Header */}
+      <div id="OrderPage_Cart_Header" className="OrderPage_Cart_Header flex justify-center rounded-t-xl ">
         {cartItems.length === 0 ? 
         <div>Cart is empty</div> : 
         <>
@@ -26,9 +28,9 @@ export default function Cart(props) {
       </div>
 
       {/* Cart Items */}
-      <div id="cart_items_container" className="cart_items_container">
+      <div id="OrderPage_Cart_Items" className="OrderPage_Cart_Items box">
         {cartItems.map((item) => (
-            <div key={item.id} className="cart_item box">
+            <div key={item.id} className="Cart_Item box">
                 <div className="col-2">{item.name}</div>
                 <div className="col-2">
                 <button onClick={() => onRemove(item)} className="remove">
@@ -48,38 +50,45 @@ export default function Cart(props) {
 
         {/* Total price */}
       {cartItems.length !== 0 && (
-          <div id="cart_total" className="w-full ">
+          <div id="OrderPage_Cart_Total" className="OrderPage_Cart_Total m-2 px-2 pb-1 rounded-xl grid">
             <hr></hr>
-            <div className="row">
-              <div className="col-2">Items Price</div>
-              <div className="col-1 text-right">${itemsPrice.toFixed(2)}</div>
+            <div className="grid grid-cols-2 m-1">
+              <div className="">Items Price</div>
+              <div className=" text-right">${itemsPrice.toFixed(2)}</div>
             </div>
 
-            <div className="row">
-              <div className="col-2">Tax Price</div>
-              <div className="col-1 text-right">${taxPrice.toFixed(2)}</div>
+            <div className="grid grid-cols-2 m-1 mt-0">
+              <div className="">Tax Price</div>
+              <div className=" text-right">${taxPrice.toFixed(2)}</div>
             </div>
 
-            <div className="row">
-              <div className="col-2">Shipping Price</div>
-              <div className="col-1 text-right">
+            <div className="grid grid-cols-2 m-1 mt-0">
+              <div className="">Shipping Price</div>
+              <div className=" text-right">
                 ${shippingPrice.toFixed(2)}
               </div>
             </div>
 
-            <div className="row header_1">
-              <div className="col-2">
+            <div className=" Total_Price grid grid-cols-2 m-1 px-1 header_1">
+              <div className="">
                 <strong>Total Price</strong>
               </div>
-              <div className="col-1 text-right">
+              <div className=" text-right">
                 <strong>${totalPrice.toFixed(2)}</strong>
               </div>
             </div>
 
             <hr />
 
-            <div className="row">
-              <button onClick={() => alert('Implement Checkout!')}>
+            <div className="flex justify-center items-center">
+              <button className="Total_Btn m-1 p-1 rounded w-full box2" onClick={
+                    () => {
+                        let customersOrder = cartItems.map(el => ({dish: el.name, qty: el.qty}) )
+                        // let myJSON = JSON.stringify(customersOrder)
+                        alert(JSON.stringify(customersOrder))
+                        // console.log(customersOrder)
+                    }
+                }>
                 Checkout
               </button>
             </div>

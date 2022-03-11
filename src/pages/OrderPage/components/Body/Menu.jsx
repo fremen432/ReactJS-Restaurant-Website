@@ -24,9 +24,8 @@ export default function Menu(props) {
   const sortedMenu = sortMenu(products);
   const dish_name_classes = 'grid grid-cols-4'
 
-  
   return (
-    <div id="Menu" className="box Menu section col-span-2 mx-2"> 
+    <div id="Menu" className="box OrderPage_Menu section col-span-2 m-4"> 
       <h1 className="text-center">Menu</h1>
 
       {/* Menu Categories */}
