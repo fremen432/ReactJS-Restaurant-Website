@@ -22,14 +22,24 @@ export default function Menu(props) {
     return [apps, friedRice, pho, specials]
   }
   const sortedMenu = sortMenu(products);
-  const dish_name_classes = 'grid grid-cols-4'
 
   return (
-    <div id="Menu" className="box OrderPage_Menu section col-span-2 m-4"> 
+    <div id="Menu" className="
+    box 
+    OrderPage_Menu 
+    section 
+    md:col-span-2 
+    sm:col-span-1 
+    m-4"> 
       <h1 className="text-center">Menu</h1>
 
       {/* Menu Categories */}
-      <div className="menu_categories grid grid-cols-2">
+      <div className="
+      menu_categories 
+      grid xl:grid-cols-3 
+      lg:grid-cols-2 
+      md:grid-cols-1
+      ">
         
         {/* Returns h1 with all category and respective menu items inside */}
         {sortedMenu.map(arr => 
@@ -44,3 +54,4 @@ export default function Menu(props) {
     </div>
   )
 }
+// 

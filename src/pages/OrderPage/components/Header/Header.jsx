@@ -15,6 +15,7 @@ export default function Header(props) {
                 <img className="" src="assets/Simply-Pho-House.png" alt="restaurant logo" />
             </a>
         </div>
+        {}
         <a href='#' className="OrderPage_Header_RightIcon flex justify-center items-center  m-5 box rounded">
             <div className="RightIcon_ItemCount mx-2 ">
                 <span className="box ItemCount_span rounded-full px-1">{cartItems.length}</span>
@@ -31,13 +32,6 @@ export default function Header(props) {
             </div>
 
         </a>
-
-        {/* <ul className="navbar_elements">
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#Menu">Menu</a></li>
-            <OrderDropDown/>
-            <li><a href="#Contact">Contact</a></li>
-        </ul> */}
     </div>
   )
 }

@@ -206,13 +206,20 @@ $green_light3: rgb(210, 255, 210);
 
 // }
 
-// Break Points: 
+// Break Points (according to google inspect): 
 // Laptop L:  1440px
 // Laptop:    1024px
 // Tablet:    768px
 // Mobile L:  425px
 // Mobile M:  375px
 // Mobile S:  320px
+
+// Break Points (according to tailwind css): 
+// 'sm':  640px
+// 'md':  768px
+// 'lg':  1024px
+// 'xl':  1280px
+// '2xl':  1536px
 
 
 /* Extra small devices (phones, 600px and down) */
