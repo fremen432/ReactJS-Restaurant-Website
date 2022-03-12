@@ -1,6 +1,3 @@
-// import data from '../../../../Data'
-// const menu = data.menu
-
 import Dish from './Dish'
 
 export default function Menu(props) {

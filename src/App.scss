@@ -64,7 +64,7 @@ $green_light3: rgb(210, 255, 210);
       display: inline-block;
     }
     .dropdown-content {
-      display: none;
+      // display: none;
       position: absolute;
       background-color: rgba(255, 255, 255, 0.65);
       min-width: 160px;
@@ -75,10 +75,10 @@ $green_light3: rgb(210, 255, 210);
     .dropdown-location:hover {
       background-color: rgba(123, 251, 255, 0.65);
     }
-    .dropdown:hover .dropdown-content {
-      display: block;
+    // .dropdown:hover .dropdown-content {
+    //   display: block;
   
-    }
+    // }
   }
   .body_footer_wrapper {
     max-height: calc(100vh - $header_footer_height);
