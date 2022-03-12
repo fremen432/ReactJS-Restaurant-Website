@@ -1,5 +1,5 @@
-import Menu from './Menu'
-import Cart from './Cart'
+import Menu from './OP_Menu'
+import Cart from './OP_Cart'
 
 export default function Body(props) {
 

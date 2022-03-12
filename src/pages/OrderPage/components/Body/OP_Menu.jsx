@@ -1,4 +1,4 @@
-import Dish from './Dish'
+import Dish from './OP_Dish'
 
 export default function Menu(props) {
   const { products, onAdd } = props;

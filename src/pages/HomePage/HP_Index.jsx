@@ -1,6 +1,6 @@
-import Header from './components/Header/Header';
-import Body from './components/Body/Body';
-import Footer from './components/Footer/Footer';
+import Header from './components/Header/HP_Header';
+import Body from './components/Body/HP_Body';
+import Footer from './components/Footer/HP_Footer';
 
 const HomePage = () => {
     return (

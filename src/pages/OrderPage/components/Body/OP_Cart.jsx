@@ -81,9 +81,7 @@ export default function Cart(props) {
             <button className="Total_Btn m-1 p-1 rounded w-full box2" onClick={
               () => {
                 let customersOrder = cartItems.map(el => ({ dish: el.name, qty: el.qty }))
-                // let myJSON = JSON.stringify(customersOrder)
                 alert(JSON.stringify(customersOrder))
-                // console.log(customersOrder)
               }
             }>
               Checkout

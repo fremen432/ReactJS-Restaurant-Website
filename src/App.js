@@ -3,8 +3,8 @@ import './App.scss';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 //  Page imports
-import Homepage from './pages/HomePage/HomePage';
-import OrderPage from './pages/OrderPage/OrderPage';
+import Homepage from './pages/HomePage/HP_Index';
+import OrderPage from './pages/OrderPage/OP_Index';
 
 function App() {
 
