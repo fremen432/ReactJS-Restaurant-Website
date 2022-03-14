@@ -126,10 +126,10 @@ $green_light3: rgb(210, 255, 210);
   }
 }
 
-.OrderPage_Header {
+.OP_Header {
 
 
-  .OrderPage_Header_RightIcon {
+  .OP_Header_RightIcon {
     background-color: $green_light3;
 
     .ItemCount_span {
@@ -137,26 +137,66 @@ $green_light3: rgb(210, 255, 210);
       color: white;
     }
   }
+    .OP_HeaderCart { 
+      background-color: rgb(255, 182, 182); 
+      height: $relativeVH;
+      max-height: 80vh;
+
+      // position: sticky;
+      // overflow-y: auto;
+  
+      .OP_HeaderCart_Header {
+        background-color: rgb(0, 255, 242);
+      }
+    
+      .OP_HeaderCart_CartItems {
+        background-color: rgb(4, 131, 0);
+        overflow-y: auto;
+  
+        .OP_HeaderCart_CartItems_Item {
+          margin: .5rem;
+          background-color: rgb(9, 255, 0);
+        }
+    
+      }
+    
+      .OP_HeaderCart_Total {
+        background-color: rgb(255, 249, 167);
+        // position: absolute;
+  
+        // .Total_Price_el {
+        //   display: grid;
+        // }
+  
+        .OP_HeaderCart_Total_TotalPrice { background-color: rgb(255, 238, 0);
+        border: 2px solid black
+        }
+        .OP_HeaderCart_Total_TotalBtn {
+          background-color: rgb(209, 130, 146);
+        }
+      }
+    
+    }
 }
 
-.OrderPage_Body {
-  // $OrderPage_Cart_Total_height: ;
+.OP_Body {
+
   .OrderPage_Menu { 
     background-color: rgb(160, 233, 255); 
 
   }
 
-  .OrderPage_Cart { 
+  .OP_Body_Cart { 
     background-color: rgb(255, 182, 182); 
     height: $relativeVH;
     // position: sticky;
     // overflow-y: auto;
 
-    .OrderPage_Cart_Header {
+    .OP_Body_Cart_Header {
       background-color: rgb(0, 255, 242);
     }
   
-    .OrderPage_Cart_Items {
+    .OP_Body_Cart_Items {
       background-color: rgb(4, 131, 0);
       overflow-y: auto;
 
@@ -167,7 +207,7 @@ $green_light3: rgb(210, 255, 210);
   
     }
   
-    .OrderPage_Cart_Total {
+    .OP_Body_Cart_Total {
       background-color: rgb(255, 249, 167);
       // position: absolute;
 

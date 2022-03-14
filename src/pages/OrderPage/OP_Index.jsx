@@ -41,7 +41,12 @@ const OrderHomepage = () => {
 
     return (
         <div className="app">
-            <Header cartItems={cartItems} />
+            <Header 
+              products={products}
+              cartItems={cartItems}
+              onAdd={onAdd}
+              onRemove={onRemove}
+            />
             <div className="body_footer_wrapper ">
                 <Body 
                 products={products}

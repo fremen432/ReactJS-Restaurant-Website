@@ -9,10 +9,10 @@ export default function Cart(props) {
   const totalPrice = itemsPrice + taxPrice + shippingPrice;
 
   return (
-    <div id="OrderPage_Cart" className="hidden sm:flex box OrderPage_Cart section flex-col m-4 ml-0 rounded-xl" >
+    <div id="OP_Body_Cart" className="hidden sm:flex box OP_Body_Cart section flex-col m-4 ml-0 rounded-xl" >
 
       {/* Cart Header */}
-      <div id="OrderPage_Cart_Header" className="OrderPage_Cart_Header flex justify-center rounded-t-xl ">
+      <div id="OP_Body_Cart_Header" className="OP_Body_Cart_Header flex justify-center rounded-t-xl ">
         {cartItems.length === 0 ?
           <div>Cart is empty</div> :
           <>
@@ -25,7 +25,7 @@ export default function Cart(props) {
       </div>
 
       {/* Cart Items */}
-      <div id="OrderPage_Cart_Items" className="OrderPage_Cart_Items box">
+      <div id="OP_Body_Cart_Items" className="OP_Body_Cart_Items box">
         {cartItems.map((item) => (
           <div key={item.id} className="Cart_Item box">
             <div className="col-2">{item.name}</div>
@@ -47,7 +47,7 @@ export default function Cart(props) {
 
       {/* Total price */}
       {cartItems.length !== 0 && (
-        <div id="OrderPage_Cart_Total" className="OrderPage_Cart_Total m-2 px-2 pb-1 rounded-xl grid">
+        <div id="OP_Body_Cart_Total" className="OP_Body_Cart_Total m-2 px-2 pb-1 rounded-xl grid">
           <hr></hr>
           <div className="grid grid-cols-2 m-1">
             <div className="">Items Price</div>

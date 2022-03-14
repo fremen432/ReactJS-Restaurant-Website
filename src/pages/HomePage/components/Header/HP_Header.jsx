@@ -9,6 +9,7 @@ const DropDown = () => {
             <button onClick={isOpen_Toggle} >Order</button>
             {/* <button onClick={() => console.log(isOpen)} >CLG</button> */}
             <ul className={"dropdown-content " + (isOpen == false ? "hidden" : "block")}>
+            {/* <ul className={"dropdown-content hidden focus:block"}> */}
                 <li className="dropdown-location"><a href="/order">Dripping Springs</a></li>
                 <li className="dropdown-location"><a href="/order">Bee Cave</a></li>
                 <li className="dropdown-location"><a href="/order">Marble Falls</a></li>

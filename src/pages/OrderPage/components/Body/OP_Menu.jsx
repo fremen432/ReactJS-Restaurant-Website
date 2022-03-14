@@ -10,10 +10,15 @@ export default function Menu(props) {
     let specials = []
 
     arr.forEach(el => {
-      if (el.category == 'Appetizers') apps.push(el)
-      if (el.category == 'Fried Rice') friedRice.push(el)
-      if (el.category == 'Noodle Soup – Pho') pho.push(el)
-      if (el.category == 'Pho House Specials') specials.push(el)
+      // if (el.category == 'Appetizers') apps.push(el)
+      // if (el.category == 'Fried Rice') friedRice.push(el)
+      // if (el.category == 'Noodle Soup – Pho') pho.push(el)
+      // if (el.category == 'Pho House Specials') specials.push(el)
+
+      el.category == 'Appetizers' && apps.push(el)
+      el.category == 'Fried Rice' && friedRice.push(el)
+      el.category == 'Noodle Soup – Pho' && pho.push(el)
+      el.category == 'Pho House Specials' && specials.push(el)
     });
 
     return [apps, friedRice, pho, specials]
