@@ -14,13 +14,18 @@ $green_light3: rgb(210, 255, 210);
 
 .cbm-green { background-color: rgb(160, 255, 160); }
 
-.box { border: 1px solid black}
+// .box { border: 1px solid black}
 .box2 { border: 2px solid black}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-.app {
+.app, .HomePage {
 
   background-color: $green_light3;
-  .Header {
+  .Header, .HP_Header {
     // position:fixed;
     // background-color: $topBar_color;
     background-color: $green_light2;
@@ -87,7 +92,6 @@ $green_light3: rgb(210, 255, 210);
     .Body {
       .section {
         min-height: $relativeVH;
-        // padding-top: $header_footer_height;
         scroll-behavior: smooth;
         scroll-snap-align: start;
       }
@@ -126,41 +130,125 @@ $green_light3: rgb(210, 255, 210);
   }
 }
 
-.OP_Header {
+.OrderPage {
 
+  .OP_Header {
+    height: $header_footer_height;
+    // max-height: 100px;
 
-  .OP_Header_RightIcon {
-    background-color: $green_light3;
+    .OP_Header_Logo {
+      height: 5rem;
+      width: 15rem;
+      // margin: 0.25em;
+    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-    .ItemCount_span {
-      background-color: black;
-      color: white;
+    .OP_Header_RightIcon {
+      // background-color: yellowgreen;
+
+      .OP_Header_RightIcon_Button {
+        background-color: $green_light3;
+        border: 1px solid $green_dark1;
+
+        .ItemCount_span {
+          background-color: black;
+          color: white;
+        }
+      }
+  
+      .OP_HeaderCart {
+        position: absolute;
+
+        left: 1;
+        right:0;
+        margin-left: 20px;
+        margin-right: 20px;
+
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 10px 10px;
+
+        background-color: $green_light3; 
+        max-height: $relativeVH;
+    
+        .OP_HeaderCart_Header {
+          background-color: $green_light2;
+        }
+      
+        .OP_HeaderCart_CartItems {
+          border: 1px solid $green_dark1;
+          background-color: $green_dark1;
+          overflow-y: auto;
+          max-height: 60vh;
+    
+          .OP_HeaderCart_CartItems_Item {
+            margin: .5rem;
+            background-color: $green_light3;
+            .remove, .add {
+              background-color: $green_dark1;
+              color: white
+            }
+          }
+      
+        }
+      
+        .OP_HeaderCart_Total {
+          background-color: $green_light2;
+
+          .horizontal_line {
+            background-color: $green_dark2;
+            height: 2px;
+
+          }
+            
+          .OP_HeaderCart_Total_TotalPrice { background-color: rgb(255, 246, 125);
+          border: 2px solid black
+          }
+          .OP_HeaderCart_Total_TotalBtn {
+            background-color: $green_dark1;
+            color: white;
+          }
+        }
+      
+      }
+
     }
   }
-    .OP_HeaderCart { 
+
+  .OP_Body {
+    // position: absolute;
+    // z-index: 1;
+
+    // z-index: 1;
+
+    .OP_Body_Menu { 
+      background-color: rgb(160, 233, 255); 
+    }
+  
+    .OP_Body_Cart { 
       background-color: rgb(255, 182, 182); 
       height: $relativeVH;
-      max-height: 80vh;
-
       // position: sticky;
       // overflow-y: auto;
   
-      .OP_HeaderCart_Header {
+      .OP_Body_Cart_Header {
         background-color: rgb(0, 255, 242);
       }
     
-      .OP_HeaderCart_CartItems {
+      .OP_Body_Cart_Items {
         background-color: rgb(4, 131, 0);
         overflow-y: auto;
   
-        .OP_HeaderCart_CartItems_Item {
+        .Cart_Item {
           margin: .5rem;
           background-color: rgb(9, 255, 0);
         }
     
       }
     
-      .OP_HeaderCart_Total {
+      .OP_Body_Cart_Total {
         background-color: rgb(255, 249, 167);
         // position: absolute;
   
@@ -168,64 +256,22 @@ $green_light3: rgb(210, 255, 210);
         //   display: grid;
         // }
   
-        .OP_HeaderCart_Total_TotalPrice { background-color: rgb(255, 238, 0);
+        .Total_Price { background-color: rgb(255, 238, 0);
         border: 2px solid black
         }
-        .OP_HeaderCart_Total_TotalBtn {
+        .Total_Btn {
           background-color: rgb(209, 130, 146);
         }
       }
     
     }
-}
+  }
 
-.OP_Body {
-
-  .OrderPage_Menu { 
-    background-color: rgb(160, 233, 255); 
+  .OP_Footer {
 
   }
 
-  .OP_Body_Cart { 
-    background-color: rgb(255, 182, 182); 
-    height: $relativeVH;
-    // position: sticky;
-    // overflow-y: auto;
-
-    .OP_Body_Cart_Header {
-      background-color: rgb(0, 255, 242);
-    }
-  
-    .OP_Body_Cart_Items {
-      background-color: rgb(4, 131, 0);
-      overflow-y: auto;
-
-      .Cart_Item {
-        margin: .5rem;
-        background-color: rgb(9, 255, 0);
-      }
-  
-    }
-  
-    .OP_Body_Cart_Total {
-      background-color: rgb(255, 249, 167);
-      // position: absolute;
-
-      // .Total_Price_el {
-      //   display: grid;
-      // }
-
-      .Total_Price { background-color: rgb(255, 238, 0);
-      border: 2px solid black
-      }
-      .Total_Btn {
-        background-color: rgb(209, 130, 146);
-      }
-    }
-  
-  }
 }
-
 
 .order_btn {
   background-color: cyan;
