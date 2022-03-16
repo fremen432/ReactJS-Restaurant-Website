@@ -24,10 +24,11 @@ export default function Menu(props) {
     <div id="OP_Body_Menu" className="
     OP_Body_Menu
     box 
+    rounded-lg
 
     col-span-2 
     m-4">
-      <h1 className="text-center">Menu</h1>
+      {/* <h1 className="text-center">Menu</h1> */}
 
       {/* Menu Categories */}
       <div className="
@@ -38,11 +39,13 @@ export default function Menu(props) {
 
         {/* Returns h1 with all category and respective menu items inside */}
         {sortedMenu.map(arr =>
-          <div className=" box m-2">
+          <div className="box mx-2">
             <h2 className="box text-center">{arr[0].category}</h2>
-            {arr.map(dish =>
-              <Dish key={dish.id} dish={dish} onAdd={onAdd} />
-            )}
+            <div className="">
+              {arr.map(dish =>
+                <Dish key={dish.id} dish={dish} onAdd={onAdd} />
+              )}
+            </div>
           </div>
         )}
       </div>

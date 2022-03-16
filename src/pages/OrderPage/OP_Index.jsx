@@ -10,6 +10,7 @@ import data from '../../Data';
 const OrderHomepage = () => {
 
     const products = data.menu
+    
     const [cartItems, setCartItems] = useState([]);
   
     const onAdd = (product) => {
@@ -39,8 +40,9 @@ const OrderHomepage = () => {
     };
   
 
+
     return (
-        <div className="OrderPage">
+        <div className="OrderPage faded">
           {/* <div className="OP_Header"> */}
             <Header 
               products={products}
