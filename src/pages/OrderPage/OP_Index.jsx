@@ -5,11 +5,11 @@ import Header from './components/Header/OP_Header';
 import Footer from './components/Footer/OP_Footer';
 import Body from './components/Body/OP_Body';
 
-import data from '../../Data';
+import { menu } from '../../Data';
 
 const OrderHomepage = () => {
 
-    const products = data.menu
+    const products = menu
     
     const [cartItems, setCartItems] = useState([]);
   

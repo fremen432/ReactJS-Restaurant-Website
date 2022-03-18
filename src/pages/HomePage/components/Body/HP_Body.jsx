@@ -4,7 +4,7 @@ import Contact from './HP_Contact'
 
 export default function Body() {
   return (
-    <div id="SECTION__Body" className="Body">
+    <div id="SECTION__Body" className="Body snap-type-y">
         <Home/>
         <Menu/>
         <Contact/>

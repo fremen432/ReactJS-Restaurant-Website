@@ -14,7 +14,7 @@ export default function Cart(props) {
       {/* Cart Header */}
       <div id="OP_HeaderCart_Header" className="Cart_Header flex justify-center rounded-lg ">
       {cartItems.length === 0 ?
-        <div className="cartEmpty rounded-lg px-1" >Cart is empty</div> :
+        <div className="cartEmpty rounded-lg px-1 " >Cart is empty</div> :
         <div className="cartNotEmpty rounded-lg">
           <h1 className="text-center">Cart</h1>
           <div className="cart_icon flex justify-center items-center mr-4">

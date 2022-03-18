@@ -158,4 +158,42 @@ const locations = [
     },
 ]
 
-export default { menu, locations }
+const hours = [
+    {
+        day: 'Monday',
+        opening: '11:00 am',
+        closing: '8:45 pm'
+    },
+    {
+        day: 'Tuesday',
+        opening: '11:00 am',
+        closing: '8:45 pm'
+    },
+    {
+        day: 'Wednesday',
+        opening: '11:00 am',
+        closing: '8:45 pm'
+    },
+    {
+        day: 'Thursday',
+        opening: '11:00 am',
+        closing: '8:45 pm'
+    },
+    {
+        day: 'Friday',
+        opening: '11:00 am',
+        closing: '9:45 pm'
+    },
+    {
+        day: 'Saturday',
+        opening: '11:00 am',
+        closing: '9:45 pm'
+    },
+    {
+        day: 'Sunday',
+        opening: '12:00 am',
+        closing: '8:45 pm'
+    },
+]
+
+export { menu, locations, hours }

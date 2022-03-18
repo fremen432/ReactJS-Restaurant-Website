@@ -21,7 +21,7 @@ const DropDown = () => {
 export default function Header() {
 
     return (
-        <div id="SECTION__Header" className="Header box">
+        <div id="SECTION__Header" className="HP_Header box">
             <div className="logo">
                 <a href="/">
                     <img className="" src="assets/Simply-Pho-House.png" alt="restaurant logo" />

@@ -1,6 +1,7 @@
 import React from 'react'
-import data from '../../../../Data'
-const locations = data.locations;
+// import locations from '../../../../Data'
+import { locations } from '../../../../Data'
+// const locations = data.locations;
 
 const input_classes = 'w-full'
 const fieldset_classes = 'my-1'

@@ -1,47 +1,39 @@
+import { hours, locations } from '../../../../Data'
+
 export default function Home() {
   return (
-    <div id="Home" className="Home section">
-      <div className="restaurant_name" ><h1>SIMPLY PHO HOUSE</h1></div>
-        <div><h2>Central Texas Vietnamese Food & Asian Fusion</h2></div>
+    <div id="Home" className="Home snap-element">
+      <h1 className="restaurant_name" >SIMPLY PHO HOUSE</h1>
+      <h2>Central Texas Vietnamese Food & Asian Fusion</h2>
       <div className="description" >
-        <div className="locations hours" >
-          {/* {console.log(locations)}
-          {locations.forEach(element => {
-            console.log('first')
-            {locations.map(el => {
-              <div className="hour_grid">
-                <span>{el.name}</span>
-                <a href="">{el.phone}</a>
-              </div>
-            })}
-          })}
-          <div className="hour_grid" >
-            <span>{locations[0].name}: </span>
-            <div>
-              <a href={'tel:+' + locations[0].phone}>{locations[0].phone}</a>
-              <span>{locations[0].address}</span>
 
+        <div className="locations" >
+          <h2 className="text-center" >Locations</h2>
+
+          {locations.map(el => 
+            <div className="grid grid-cols-5 ">
+              <span className="col-span-1">{el.name + ': '}</span>
+              <span className="col-span-3">{el.address}</span>
+              <a className="col-span-1" href="tel:+5555555555">{el.phone}</a>
             </div>
+            )}
+        </div>
 
-          </div> */}
-          <div className="hour_grid" ><span>Dripping Springs: </span><a href="tel:+5555555555">555-555-5555</a></div>
-          <div className="hour_grid" ><span>Bee Cave: </span><a href="tel:+5555555555">512-263-8889</a></div>
-          <div className="hour_grid" ><span>Marble Falls: </span><a href="tel:+5555555555">830-220-5013</a></div>
-        </div>
         <div className="hours" >
-          <div className="hour_grid" >
-            <div className="grid_el" >Monday – Thursday: </div>
-            <div className="grid_el" >11:00 am - 8:45 pm</div>
-          </div>
-          <div className="hour_grid" >
-            <div className="grid_el" >Friday & Satday: </div>
-            <div className="grid_el" >11:00 am - 9:45 pm</div>
-          </div>
-          <div className="hour_grid" >
-            <div className="grid_el" >Sunday: </div>
-            <div className="grid_el" >12:00 pm - 8:45 pm</div>
+          <h2 className="text-center" >Hours</h2>
+          <div className="hours_wrapper mx-40" >
+            {hours.map(el =>
+            <div className="grid grid-cols-2 " >
+              <span>{el.day}</span>
+              <div>
+                <span>{el.opening + ' - '}</span>
+                <span>{el.closing}</span>
+              </div>
+            </div>
+            )}
           </div>
         </div>
+
       </div>
     </div>
   )
