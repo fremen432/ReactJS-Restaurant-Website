@@ -12,6 +12,20 @@ $green_light1: rgb(0, 255, 0);
 $green_light2: rgb(140, 255, 140);
 $green_light3: rgb(210, 255, 210);
 
+// Images
+$insideStore2: url('../public/assets/images/insideStore2.jpeg');
+$insideStore1: url('../public/assets/images/insideStore1.jpeg');
+
+$dish1: url('../public/assets/images/dish1.jpeg');
+$dish2: url('../public/assets/images/dish2.jpeg');
+$dish3: url('../public/assets/images/dish3.jpeg');
+$dish4: url('../public/assets/images/dish4.jpeg');
+$dish5: url('../public/assets/images/dish5.jpeg');
+
+$drink1: url('../public/assets/images/drink1.jpeg');
+$drink2: url('../public/assets/images/drink2.jpeg');
+$drink3: url('../public/assets/images/drink3.jpeg');
+
 .cbm-green { background-color: rgb(160, 255, 160); }
 .box { border: 1px solid black}
 .box2 { border: 2px solid black}
@@ -19,7 +33,7 @@ $green_light3: rgb(210, 255, 210);
 .flex-center { display: flex; justify-content: center; align-items: center; }
 
 .app, .HomePage {
-  background-color: $green_light3;
+  // background-color: $green_light3;
 
   .HP_Header {
     background-color: $green_light2;
@@ -89,22 +103,36 @@ $green_light3: rgb(210, 255, 210);
         scroll-snap-align: start;
       }
 
-      // .section {
-      //   min-height: $relativeVH;
-      //   scroll-behavior: smooth;
-      //   scroll-snap-align: start;
-      // }
-  
-      .Home { 
-        background-color: aqua; 
+      .home_hero_parent{ position: relative; }
 
+      .hero-stack{
+        height: calc(100vh - $header_footer_height);
+        position: absolute;
+
+        top:0%;
+        bottom:0%;
+        left:0%;
+        right:0%;
+      }
+
+      .home_hero_layer1_image {
+        background-image: $insideStore2; 
+        background-position: 80%;
+        background-size: cover;
+      }
+
+      .home_hero_layer2_fade {
+        // background-color: $green_light3; 
+        background-color: white; 
+        opacity: 70%;
+        position: relative;
+      }
+  
+      .home_hero_layer3_textContent { 
         display: flex;
         justify-content: center;
         align-items: center;
-
         flex-direction: column;
-
-        height: calc(100vh - $header_footer_height);
       
         .locations {
           margin-top: 1rem;
@@ -115,16 +143,8 @@ $green_light3: rgb(210, 255, 210);
           margin-bottom: 1rem;
           width: 100%;
         }
-        .description{
-          // display: flex;
-          // justify-content: center;
-          // align-items: center;
-          // flex-direction: column;
-        }
-        .hours_wrapper {
-
-        }
       }
+
       .Menu { 
         background-color: rgb(160, 233, 255); 
         scroll-snap-align: start;
