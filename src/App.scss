@@ -105,7 +105,7 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 
       .home_hero_parent{ position: relative; }
 
-      .hero-stack{
+      .home_hero_children{
         height: calc(100vh - $header_footer_height);
         position: absolute;
 
@@ -115,20 +115,20 @@ $drink3: url('../public/assets/images/drink3.jpeg');
         right:0%;
       }
 
-      .home_hero_layer1_image {
+      .home_hero_child1_image {
         background-image: $insideStore2; 
         background-position: 80%;
         background-size: cover;
       }
 
-      .home_hero_layer2_fade {
+      .home_hero_child2_fade {
         // background-color: $green_light3; 
         background-color: white; 
         opacity: 70%;
         position: relative;
       }
   
-      .home_hero_layer3_textContent { 
+      .home_hero_child3_textContent { 
         display: flex;
         justify-content: center;
         align-items: center;

@@ -4,10 +4,10 @@ export default function Home() {
   return (
     <>
       <div className="home_hero_parent">
-        <div className=" hero-stack home_hero_layer1_image"></div>
-        <div className=" hero-stack home_hero_layer2_fade"></div>
+        <div className=" home_hero_children home_hero_child1_image"></div>
+        <div className=" home_hero_children home_hero_child2_fade"></div>
 
-        <div id="Home" className=" hero-stack home_hero_layer3_textContent snap-element">
+        <div id="Home" className=" home_hero_children home_hero_child3_textContent snap-element">
           <h1 className="restaurant_name" >SIMPLY PHO HOUSE</h1>
           <h2>Central Texas Vietnamese Food & Asian Fusion</h2>
           <div className="description" >
