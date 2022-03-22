@@ -27,10 +27,11 @@ $drink2: url('../public/assets/images/drink2.jpeg');
 $drink3: url('../public/assets/images/drink3.jpeg');
 
 .cbm-green { background-color: rgb(160, 255, 160); }
-.box { border: 1px solid black}
-.box2 { border: 2px solid black}
+// .box { border: 1px solid black}
+// .box2 { border: 2px solid black}
 
 .flex-center { display: flex; justify-content: center; align-items: center; }
+
 
 .app, .HomePage {
   // background-color: $green_light3;
@@ -78,6 +79,7 @@ $drink3: url('../public/assets/images/drink3.jpeg');
     }
     .dropdown-content {
       // display: none;
+
       position: absolute;
       background-color: rgba(255, 255, 255, 0.65);
       min-width: 160px;
@@ -85,6 +87,7 @@ $drink3: url('../public/assets/images/drink3.jpeg');
       padding: 10px 10px;
       z-index: 1;
     }
+
     .dropdown-location:hover {
       background-color: rgba(123, 251, 255, 0.65);
     }
@@ -335,6 +338,15 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 
     border-radius: 0.5rem; 
   }
+}
+
+.OP_Menu_Title {
+  background-color: $green_dark1;
+  color: white;
+}
+
+.OP_Menu_Dishes{
+  // display: none;
 }
 
 #price {

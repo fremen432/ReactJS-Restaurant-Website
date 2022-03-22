@@ -5,8 +5,8 @@ const DropDown = () => {
     const isOpen_Toggle = () => isOpen == false ? setIsOpen(true) : setIsOpen(false)
 
     return(
-        <li  className="dropdown">
-            <button onClick={isOpen_Toggle} >Order</button>
+        <li  className="dropdown Header__element">
+            <button className="dropdown__button" onClick={isOpen_Toggle} >Order</button>
             {/* <button onClick={() => console.log(isOpen)} >CLG</button> */}
             <ul className={"dropdown-content " + (isOpen == false ? "hidden" : "block")}>
             {/* <ul className={"dropdown-content hidden focus:block"}> */}
@@ -28,10 +28,10 @@ export default function Header() {
                 </a>
             </div>
             <ul className="navbar_elements">
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#Menu">Menu</a></li>
+                <li className="Header__element"><a href="#Home">Home</a></li>
+                <li className="Header__element"><a href="#Menu">Menu</a></li>
                 <DropDown />
-                <li><a href="#Contact">Contact</a></li>
+                <li className="Header__element"><a href="#Contact">Contact</a></li>
             </ul>
         </div>
     )

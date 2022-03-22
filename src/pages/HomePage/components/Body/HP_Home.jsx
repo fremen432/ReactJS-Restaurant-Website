@@ -4,6 +4,7 @@ export default function Home() {
   return (
     <>
       <div className="home_hero_parent">
+        
         <div className=" home_hero_children home_hero_child1_image"></div>
         <div className=" home_hero_children home_hero_child2_fade"></div>
 
@@ -22,6 +23,7 @@ export default function Home() {
                   <a className="col-span-1" href="tel:+5555555555">{el.phone}</a>
                 </div>
                 )}
+
             </div>
 
             <div className="hours" >

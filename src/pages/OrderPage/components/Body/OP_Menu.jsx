@@ -1,4 +1,29 @@
+import React, { useState } from 'react';
+
 import Dish from './OP_Dish'
+
+function DishCategory(props) {
+
+  const {categoryTitle, dishes, onAdd} = props;
+
+  const [isHidden, setIsHidden] = useState('')
+
+  const toggleHidden = () => {
+    console.log(isHidden);
+    setIsHidden(isHidden === '' ? 'hidden' : '')
+  }
+
+  return(
+    <div className="box m-2">
+    <h2 onClick={toggleHidden} className="OP_Menu_Title box text-center cursor-pointer rounded-lg">{categoryTitle}</h2>
+    <div className={"OP_Menu_Dishes "}>
+      {dishes.map(dish =>
+        <Dish key={dish.id} dish={dish} onAdd={onAdd} hidden={isHidden}/>
+      )}
+    </div>
+  </div>
+  )
+}
 
 export default function Menu(props) {
   const { products, onAdd } = props;
@@ -20,6 +45,15 @@ export default function Menu(props) {
   }
   const sortedMenu = sortMenu(products);
 
+  const action = () => console.log('hey')
+
+  const [isHidden, setIsHidden] = useState('')
+
+  const toggleHidden = () => {
+    console.log(isHidden);
+    setIsHidden(isHidden === '' ? 'hidden' : '')
+  }
+
   return (
     <div id="OP_Body_Menu" className="
     OP_Body_Menu
@@ -39,15 +73,9 @@ export default function Menu(props) {
 
         {/* Returns h1 with all category and respective menu items inside */}
         {sortedMenu.map(arr =>
-          <div className="box mx-2">
-            <h2 className="box text-center">{arr[0].category}</h2>
-            <div className="">
-              {arr.map(dish =>
-                <Dish key={dish.id} dish={dish} onAdd={onAdd} />
-              )}
-            </div>
-          </div>
+          <DishCategory categoryTitle={arr[0].category} dishes={arr} onAdd={onAdd} isHidden={isHidden}/>
         )}
+
       </div>
     </div>
   )

@@ -82,8 +82,10 @@ export default function Cart(props) {
           <div className="flex justify-center items-center">
             <button className="CheckoutBtn m-1 p-1 rounded w-full " onClick={
               () => {
-                let customersOrder = cartItems.map(el => ({ dish: el.name, qty: el.qty }))
-                alert(JSON.stringify(customersOrder))
+
+                alert('Your order has been sent!')
+                // let customersOrder = cartItems.map(el => ({ dish: el.name, qty: el.qty }))
+                // alert(JSON.stringify(customersOrder))
               }
             }>
               Checkout
