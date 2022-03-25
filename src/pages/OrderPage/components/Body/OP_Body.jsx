@@ -1,5 +1,6 @@
 import Menu from './OP_Menu'
 import Cart from './OP_Cart'
+import Menu1 from '../../../../misc-componenets/Menu1'; 
 
 export default function Body(props) {
 
@@ -7,9 +8,14 @@ export default function Body(props) {
 
   return (
     <div id="SECTION__Body" className="OP_Body sm:grid sm:grid-cols-3">
-      <Menu
+      {/* <Menu
         products={products}
         onAdd={onAdd}
+      /> */}
+      <Menu1
+        products={products}
+        onAdd={onAdd}
+        page="OrderPage"
       />
       <Cart
         cartItems={cartItems}

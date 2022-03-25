@@ -12,7 +12,7 @@ function Header_Cart(props) {
   
     return (
 
-        <div id="OP_Body_Cart" className="OP_HeaderCart flex flex-col box ml-0 rounded-lg" >
+        <div id="OP_Body_Cart" className="OP_HeaderCart flex flex-col box rounded-lg " >
     
             {/* Cart Header */}
             <div id="OP_HeaderCart_Header" className="Cart_Header flex justify-center rounded-lg ">
@@ -22,7 +22,7 @@ function Header_Cart(props) {
                 <h1 className="text-center">Cart</h1>
                 <div className="cart_icon flex justify-center items-center mr-4">
                     <AiOutlineShoppingCart className=" h-full w-5 mr-1" />
-                    <span className="text-xs">{cartItems.length}</span>
+                    <span className="text-s ">{cartItems.length}</span>
                 </div>
                 </div>}
             </div>
@@ -119,7 +119,7 @@ export default function Header(props) {
 
     return (
 
-        <div id="SECTION__Header" className=" OP_Header box flex justify-between">
+        <div id="SECTION__Header" className=" OP_Header Header box flex justify-between ">
 
             {/* Logo */}
             <div className="OP_Header_Logo">

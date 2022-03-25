@@ -27,7 +27,7 @@ const menu = [
         name: 'Fresh Brewed Jasmine Iced Tea',
         description: '',
         category:'Beverages',
-        price: '',
+        price: '1.00',
         extra_description: '',
         id: 4
 
@@ -36,7 +36,7 @@ const menu = [
         name: 'Soft Drink',
         description: 'Coke, Diet Coke, DrPepper, Sprite, Root Beer, Lemonade Minutemade, Barq’s Rootbeer',
         category:'Beverages',
-        price: '',
+        price: '2.00',
         extra_description: '',
         id: 5
 
@@ -196,4 +196,23 @@ const hours = [
     },
 ]
 
-export { menu, locations, hours }
+const sortMenu = arr => {
+    let apps = []
+    let drinks = []
+    let friedRice =[]
+    let pho = []
+    let specials = []
+
+    arr.forEach(el => {
+        el.category == 'Appetizers' && apps.push(el)
+        el.category == 'Beverages' && drinks.push(el)
+        el.category == 'Fried Rice' && friedRice.push(el)
+        el.category == 'Noodle Soup – Pho' && pho.push(el)
+        el.category == 'Pho House Specials' && specials.push(el)
+    });
+
+    return [apps, drinks, friedRice, pho, specials]
+}
+const sortedMenu = sortMenu(menu);
+
+export { menu, locations, hours, sortedMenu }

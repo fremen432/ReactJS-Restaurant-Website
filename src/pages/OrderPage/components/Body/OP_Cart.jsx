@@ -19,7 +19,7 @@ export default function Cart(props) {
           <h1 className="text-center">Cart</h1>
           <div className="cart_icon flex justify-center items-center mr-4">
               <AiOutlineShoppingCart className=" h-full w-5 mr-1" />
-              <span className="text-xs">{cartItems.length}</span>
+              <span className="text-s">{cartItems.length}</span>
           </div>
         </div>}
       </div>

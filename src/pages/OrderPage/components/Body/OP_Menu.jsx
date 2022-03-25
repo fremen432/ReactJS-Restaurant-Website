@@ -1,17 +1,14 @@
 import React, { useState } from 'react';
 
+import { sortedMenu } from '../../../../Data';
+
 import Dish from './OP_Dish'
 
 function DishCategory(props) {
 
   const {categoryTitle, dishes, onAdd} = props;
-
-  const [isHidden, setIsHidden] = useState('')
-
-  const toggleHidden = () => {
-    console.log(isHidden);
-    setIsHidden(isHidden === '' ? 'hidden' : '')
-  }
+  const [isHidden, setIsHidden] = useState('hidden ')
+  const toggleHidden = () => setIsHidden(isHidden === '' ? 'hidden ' : '')
 
   return(
     <div className="box m-2">
@@ -26,33 +23,7 @@ function DishCategory(props) {
 }
 
 export default function Menu(props) {
-  const { products, onAdd } = props;
-
-  const sortMenu = arr => {
-    let apps = []
-    let friedRice = []
-    let pho = []
-    let specials = []
-
-    arr.forEach(el => {
-      el.category == 'Appetizers' && apps.push(el)
-      el.category == 'Fried Rice' && friedRice.push(el)
-      el.category == 'Noodle Soup – Pho' && pho.push(el)
-      el.category == 'Pho House Specials' && specials.push(el)
-    });
-
-    return [apps, friedRice, pho, specials]
-  }
-  const sortedMenu = sortMenu(products);
-
-  const action = () => console.log('hey')
-
-  const [isHidden, setIsHidden] = useState('')
-
-  const toggleHidden = () => {
-    console.log(isHidden);
-    setIsHidden(isHidden === '' ? 'hidden' : '')
-  }
+  const { onAdd } = props;
 
   return (
     <div id="OP_Body_Menu" className="
@@ -73,11 +44,10 @@ export default function Menu(props) {
 
         {/* Returns h1 with all category and respective menu items inside */}
         {sortedMenu.map(arr =>
-          <DishCategory categoryTitle={arr[0].category} dishes={arr} onAdd={onAdd} isHidden={isHidden}/>
+          <DishCategory categoryTitle={arr[0].category} dishes={arr} onAdd={onAdd}/>
         )}
 
       </div>
     </div>
   )
 }
-// 

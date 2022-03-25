@@ -1,3 +1,6 @@
+// .box { border: 1px solid black}
+// .box2 { border: 2px solid black}
+
 $header_footer_height: 80px;
 
 $topBar_color: rgb(160, 255, 160);
@@ -8,13 +11,16 @@ $green_dark1: rgb(0, 71, 0);
 $green_dark2: rgb(0, 117, 0);
 $green_dark3: rgb(1, 163, 1);
 
-$green_light1: rgb(0, 255, 0);
-$green_light2: rgb(140, 255, 140);
-$green_light3: rgb(210, 255, 210);
+$green_light1: rgb(107, 238, 107);
+$green_light2: rgb(205, 255, 205);
+$green_light3: rgb(238, 255, 238);
 
 // Images
-$insideStore2: url('../public/assets/images/insideStore2.jpeg');
 $insideStore1: url('../public/assets/images/insideStore1.jpeg');
+$insideStore2: url('../public/assets/images/insideStore2.jpeg');
+$insideStore3: url('../public/assets/images/insideStore3.jpeg');
+
+$teamPic4: url('../public/assets/images/teamPic4.jpeg');
 
 $dish1: url('../public/assets/images/dish1.jpeg');
 $dish2: url('../public/assets/images/dish2.jpeg');
@@ -27,33 +33,33 @@ $drink2: url('../public/assets/images/drink2.jpeg');
 $drink3: url('../public/assets/images/drink3.jpeg');
 
 .cbm-green { background-color: rgb(160, 255, 160); }
-// .box { border: 1px solid black}
-// .box2 { border: 2px solid black}
 
 .flex-center { display: flex; justify-content: center; align-items: center; }
 
+.OP_Header, .OP_Footer, .HP_Header, .HP_Footer{
+  background-color: $green_light2;
+
+  width: 100vw;
+  height: $header_footer_height;
+
+  display: flex;
+  justify-content: space-between;
+}
 
 .app, .HomePage {
-  // background-color: $green_light3;
 
   .HP_Header {
-    background-color: $green_light2;
-
-    width: 100vw;
-    height: $header_footer_height;
   
-    display: flex;
-    justify-content: space-between;
-  
-    .logo {
-      height: 5rem;
-      width: 15rem;
-      // margin: 0.25em;
+    // .logo {
+    //   max-height: 5rem;
+    //   width: 15rem;
+    //   // background-color: blue;
     
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    // }
+
     
     .navbar_elements {
       list-style-type: none;
@@ -125,8 +131,8 @@ $drink3: url('../public/assets/images/drink3.jpeg');
       }
 
       .home_hero_child2_fade {
-        // background-color: $green_light3; 
-        background-color: white; 
+        background-color: $green_light3; 
+        // background-color: white; 
         opacity: 70%;
         position: relative;
       }
@@ -149,31 +155,72 @@ $drink3: url('../public/assets/images/drink3.jpeg');
       }
 
       .Menu { 
-        background-color: rgb(160, 233, 255); 
+        background-color: $green_light2; 
         scroll-snap-align: start;
 
       }
-      .Contact { background-color: rgb(236, 161, 255); 
-        height: calc(100vh - $header_footer_height - $header_footer_height);
-      }
-      #Contact {
-        // min-height: calc(100vh - $header_footer_height)
-      }
-      
     }
-    .Footer { 
-      background-color: rgb(255, 247, 132);
-      height: $header_footer_height;
-    }
-    
   }
 }
+
+.BgHeroImage_parent{ position: relative; }
+
+.BgHeroImage_children{
+  height: calc(100vh - $header_footer_height - $header_footer_height);
+  position: absolute;
+
+  top:0%;
+  bottom:0%;
+  left:0%;
+  right:0%;
+}
+
+.BgHeroImage_child1_image {
+  // background-image: $insideStore1; 
+  background-position: 80%;
+  background-size: cover;
+
+  // background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/times-square-perspective.jpg);
+}
+
+.BgHeroImage_child2_fade {
+  background-color: $green_light3; 
+  // background-color: white; 
+  opacity: 70%;
+  position: relative;
+}
+
+.Image_Layer{
+  height: calc(100vh - $header_footer_height);
+  position: absolute;
+
+  top:0%;
+  bottom:0%;
+  left:0%;
+  right:0%;
+}
+
+.bg-image1{
+  background-image: $insideStore2; 
+  background-position: 80%;
+  background-size: cover;
+}
+
+.bg-image2{
+  background-image: $insideStore1; 
+  background-position: 80%;
+  background-size: cover;
+  // opacity: 50%;
+}
+
+
+
 
 .OrderPage {
 
   .OP_Header {
-    background-color: $green_light2;
-    height: $header_footer_height;
+    // background-color: $green_light2;
+    // height: $header_footer_height;
     // max-height: 100px;
 
     .OP_Header_Logo {
@@ -187,7 +234,6 @@ $drink3: url('../public/assets/images/drink3.jpeg');
     }
 
     .OP_Header_RightIcon {
-      // background-color: yellowgreen;
 
       .OP_Header_RightIcon_Button {
         background-color: $green_light3;
@@ -202,14 +248,13 @@ $drink3: url('../public/assets/images/drink3.jpeg');
       .OP_HeaderCart {
         position: absolute;
 
-        left: 1;
+        left: 0;
         right:0;
 
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 
         margin-left: 20px;
         margin-right: 20px;
-    
       }
     }
   }
@@ -218,12 +263,14 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 
     .OP_Body_Menu { 
       background-color: $green_light3; 
+      border: 1px solid $green_dark2;
 
       .order_btn {
         background-color: $green_dark1;
         color: white;
       }
       .menu_item {
+        border: 1px solid $green_dark2;
         background-color: $green_light2;
       }
     }
@@ -259,12 +306,6 @@ $drink3: url('../public/assets/images/drink3.jpeg');
       }
     
     }
-
-  }
-
-  .OP_Footer {
-    background-color: $green_light2;
-    height: $header_footer_height;
 
   }
 
@@ -340,6 +381,11 @@ $drink3: url('../public/assets/images/drink3.jpeg');
   }
 }
 
+.contact-submit{
+  background-color: $green_dark1;
+  color: white;
+
+}
 .OP_Menu_Title {
   background-color: $green_dark1;
   color: white;
@@ -349,10 +395,71 @@ $drink3: url('../public/assets/images/drink3.jpeg');
   // display: none;
 }
 
+.logo_HP_Header{
+  width: 15rem;
+}
+
+.logo_HP_Home{
+  max-width: 50rem;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-1{
+  background-color: $green_light2;
+  border-radius: 8px;
+}
+
 #price {
   color: $text_color1;
 }
 
 .dish_name {
   font-weight: bold;
+}
+.ContactUs_Wrapper{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+  position: relative;
+
+  height: calc(100vh - $header_footer_height - $header_footer_height);
+
+  
+}
+.ContactUs_img {
+  background-image: $teamPic4;
+  opacity: 40%;
+
+  position: absolute;
+  background-size: cover;
+
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.ContactUs_content { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: $green_light3;
+
+  padding: 5px;
+
+  position: relative;
+}
+
+.contact_fieldset{
+  border: 1px solid $green_dark2;
+  // border-radius: 5px;
 }
