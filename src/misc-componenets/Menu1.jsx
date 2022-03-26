@@ -28,8 +28,8 @@ function DishCategory(props) {
   const toggleHidden = () => setIsHidden(isHidden === '' ? 'hidden ' : '')
 
   return(
-    <div className="box m-2">
-    <h2 onClick={page =='HomePage' ? '' : toggleHidden} className={"OP_Menu_Title box text-center cursor-pointer rounded-lg "}>{categoryTitle}</h2>
+    <div className="box m-2 shadow-lg box rounded-lg">
+    <h2 onClick={page =='HomePage' ? '' : toggleHidden} className={"OP_Menu_Title box text-center rounded-lg " + (page =='HomePage' ? '' : 'cursor-pointer ')}>{categoryTitle}</h2>
     <div className={"OP_Menu_Dishes "}>
       {dishes.map(dish =>
         <Dish key={dish.id} dish={dish} onAdd={onAdd} isHidden={isHidden} page={page}/>
@@ -43,10 +43,11 @@ export default function Menu1(props) {
   const { onAdd, page } = props;
 
   return (
-    <div id="OP_Body_Menu" className="
+    <div id="Menu" className="
     OP_Body_Menu
     box 
     rounded-lg
+    shadow-lg
 
     col-span-2 
     m-4">

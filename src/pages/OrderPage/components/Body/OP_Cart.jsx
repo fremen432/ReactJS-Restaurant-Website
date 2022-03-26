@@ -9,7 +9,7 @@ export default function Cart(props) {
   const totalPrice = itemsPrice + taxPrice + shippingPrice;
 
   return (
-    <div id="OP_Body_Cart" className="Cart hidden sm:flex box flex-col m-4 ml-0 rounded-lg" >
+    <div id="OP_Body_Cart" className="Cart hidden sm:flex box flex-col m-4 ml-0 rounded-lg " >
 
       {/* Cart Header */}
       <div id="OP_HeaderCart_Header" className="Cart_Header flex justify-center rounded-lg ">

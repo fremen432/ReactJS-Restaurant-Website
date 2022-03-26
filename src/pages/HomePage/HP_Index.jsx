@@ -1,12 +1,15 @@
 import Header from './components/Header/HP_Header';
 import Body from './components/Body/HP_Body';
-import Footer from './components/Footer/HP_Footer';
+// import Footer from './components/Footer/HP_Footer';
+import Footer from '../../misc-componenets/Footer';
 
-const HomePage = () => {
+const HomePage = (props) => {
+    const { setIsOpen, isOpen } = props
+
     return (
         <div className="app">
-            <Header />
-            <div className="body_footer_wrapper ">
+            <Header setIsOpen={ setIsOpen } isOpen={ isOpen } />
+            <div id className="body_footer_wrapper ">
                 <Body />
                 <Footer />
             </div>
