@@ -1,5 +1,4 @@
 import Home from './HP_Home'
-// import Menu from './HP_Menu'
 import Contact from './HP_Contact'
 import Menu from '../../../../misc-componenets/Menu'
 

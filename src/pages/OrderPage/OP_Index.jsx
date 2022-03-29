@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
 // Components imports
-import Header from './components/Header/OP_Header';
-// import Footer from './components/Footer/OP_Footer';
-import Body from './components/Body/OP_Body';
+import Header from './components/OP_Header';
+// import Body from './components/Body/OP_Body';
+import Body from './components/OP_Body';
 import Footer from '../../misc-componenets/Footer';
 
 import { menu } from '../../Data';

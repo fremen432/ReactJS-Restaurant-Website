@@ -20,10 +20,9 @@ const DropDown = (props) => {
     }
 
     return(
-        <li  className="dropdown ">
+        <li className="dropdown ">
             <button id="dropdown_btn" className={Header__element} onClick={ isOpen_Toggle } >Order</button>
             <div className="">
-
                 <ul className={"dropdown-content " + (
                     isOpen == false ? 'animate_UP hidden ' : 
                     isOpen == true ? "animate_DOWN block ":

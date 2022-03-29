@@ -41,7 +41,6 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 .OP_Header, .OP_Footer, .HP_Header, .HP_Footer{
   background-color: $green_light2;
 
-  // width: 100vw;
   height: $header_footer_height;
 
   display: flex;
@@ -51,7 +50,6 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 .Footer{
   background-color: $green_light2;
 
-  // width: 100vw;
   height: $header_footer_height;
 
   display: flex;
@@ -145,7 +143,6 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 
       .home_hero_child2_fade {
         background-color: $green_light3; 
-        // background-color: white; 
         opacity: 70%;
         position: relative;
       }
@@ -195,7 +192,6 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 
 .BgHeroImage_child2_fade {
   background-color: $green_light3; 
-  // background-color: white; 
   opacity: 70%;
   position: relative;
 }
@@ -220,10 +216,7 @@ $drink3: url('../public/assets/images/drink3.jpeg');
   background-image: $insideStore1; 
   background-position: 80%;
   background-size: cover;
-  // opacity: 50%;
 }
-
-
 
 
 .OrderPage {
@@ -470,35 +463,28 @@ $drink3: url('../public/assets/images/drink3.jpeg');
     color: white;
   }
   .menu_item {
-    // position: absolute;
-    // z-index: -1;
     border: 1px solid $green_dark2;
     background-color: $green_light2;
   }
 }
 
-
+// Animations
 .animate_DOWN {
   animation-name: fade_IN, slide_DOWN, displayBlock;
-  // animation-name: fade_IN, roll_DOWN;
   animation-duration: 200ms;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
-  // animation-delay: 200ms;
 
   overflow: hidden;
 }
 
 .animate_UP {
   animation-name: fade_OUT, slide_UP, displayHidden;
-  // animation-name: fade_OUT, roll_UP;
   animation-duration: 200ms;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
-  // animation-delay: 200ms;
 
   overflow: hidden;
-
 }
 
 .roll_UP_animation {
@@ -506,7 +492,6 @@ $drink3: url('../public/assets/images/drink3.jpeg');
   animation-duration: 200ms;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
-  // animation-delay: 200ms;
   overflow: hidden;
 }
 
@@ -515,7 +500,6 @@ $drink3: url('../public/assets/images/drink3.jpeg');
   animation-duration: 200ms;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
-  // animation-delay: 200ms;
   overflow: hidden;
 }
 

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 
-import Cart from '../../../../misc-componenets/Cart';
-import Logo from '../../../../misc-componenets/Logo';
+import Cart from '../../../misc-componenets/Cart';
+import Logo from '../../../misc-componenets/Logo';
 
 export default function Header(props) {
 
