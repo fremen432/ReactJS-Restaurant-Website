@@ -1,19 +1,39 @@
+import { useState } from 'react';
+
 import Logo from '../../../../misc-componenets/Logo';
 
-const Header__element = 'mr-1 sm:mr-4 '
+const Header__element = 'Header_element  '
 
 const DropDown = (props) => {
-    const { setIsOpen, isOpen } = props
+    const [isOpen, setIsOpen] = useState(false);
+
+    document.onclick = (e) => {
+      if (e.target.id !== 'dropdown_btn') { 
+        console.log(isOpen);
+        setIsOpen(false) 
+      }
+    }
+  
+
+    // const { setIsOpen, isOpen } = props
     const isOpen_Toggle = () => setIsOpen( isOpen == false ? true : false)
+
+
 
     return(
         <li  className={Header__element + "dropdown "}>
             <button id="dropdown_btn" className="dropdown__button" onClick={ isOpen_Toggle } >Order</button>
-            <ul className={"dropdown-content " + ( isOpen == false ? "hidden" : "block")}>
-                <li className="dropdown-location"><a href="/order">Dripping Springs</a></li>
-                <li className="dropdown-location"><a href="/order">Bee Cave</a></li>
-                <li className="dropdown-location"><a href="/order">Marble Falls</a></li>
-            </ul>
+            <div className="">
+
+                <ul className={"dropdown-content " + ( 
+
+                    isOpen == false ? "animate_UP " : "animate_DOWN "
+                    )}>
+                    <li className="dropdown-location "><a href="/order">Dripping Springs</a></li>
+                    <li className="dropdown-location"><a href="/order">Bee Cave</a></li>
+                    <li className="dropdown-location"><a href="/order">Marble Falls</a></li>
+                </ul>
+            </div>
         </li>
     )
 }

@@ -86,15 +86,21 @@ $drink3: url('../public/assets/images/drink3.jpeg');
     }
     .dropdown-content {
       position: absolute;
+      left: 0px;
+      right: 0px;
+      top: 35px;
+      // margin-top: 10px;
+      // top: 0px;
+
       background-color: rgba(255, 255, 255, 0.65);
-      min-width: 160px;
+      min-width: 130px;
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       padding: 10px 10px;
       z-index: 1;
     }
 
     .dropdown-location:hover {
-      background-color: rgba(123, 251, 255, 0.65);
+      background-color: $green_light2;
     }
   }
   .body_footer_wrapper {
@@ -471,6 +477,65 @@ $drink3: url('../public/assets/images/drink3.jpeg');
   border: 1px solid $green_dark2;
 }
 
-.Header__element{
+.Header_element {
+  padding: 5px 10px 5px 10px;
+}
 
+.Header_element:hover{
+  background-color: $green_light1;
+}
+.animate_DOWN {
+  animation-name: fade_IN, slide_DOWN;
+  animation-duration: 200ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-delay: 200ms;
+}
+
+.animate_UP {
+  animation-name: fade_OUT, slide_UP;
+  animation-duration: 200ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-delay: 200ms;
+}
+
+@keyframes fade_IN {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade_OUT {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slide_DOWN {
+  0% {
+    margin-top: -10px;
+  }
+  
+  100% {
+    margin-top: 0px;
+  }
+  
+}
+
+@keyframes slide_UP {
+  0% {
+    margin-top: 0px;
+  }
+  
+  100% {
+    margin-top: -10px;
+  }
+  
 }
