@@ -1,6 +1,5 @@
-import Menu from './OP_Menu'
 import Cart from './OP_Cart'
-import Menu1 from '../../../../misc-componenets/Menu1'; 
+import Menu from '../../../../misc-componenets/Menu'; 
 
 export default function Body(props) {
 
@@ -12,7 +11,7 @@ export default function Body(props) {
         products={products}
         onAdd={onAdd}
       /> */}
-      <Menu1
+      <Menu
         products={products}
         onAdd={onAdd}
         page="OrderPage"
