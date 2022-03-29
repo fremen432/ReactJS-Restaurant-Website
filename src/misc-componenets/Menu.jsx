@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { sortedMenu } from '../Data';
 
 function Dish(props) {
-    const { dish, onAdd, arr, isHidden, page } = props;
+    const { dish, onAdd, page } = props;
     const dish_name_classes = 'grid grid-cols-4 '
 
     return (
       <>
         {/* <div className={"menu_item m-2 box p-2 pt-1 rounded-lg  " + (page =='HomePage' ? 'block ' : isHidden)}> */}
-        <div className={"menu_item m-2 box p-2 pt-1 rounded-lg  " }>
+        <div className={"menu_item m-2 p-2 pt-1 rounded-lg  " }>
           <div className={dish_name_classes + " dish_name"} >
               <h3 className="text-lg col-start-1 col-span-3 ">{dish.name}</h3>
               <span id="price" className="text-sm col-start-4 col-span-1 text-center">{
@@ -25,6 +25,7 @@ function Dish(props) {
 
 function DishCategory(props) {
   const {categoryTitle, dishes, onAdd, page} = props;
+
   const [isHidden, setIsHidden] = useState('start')
   const toggleHidden = () => { 
     setIsHidden(
@@ -39,12 +40,13 @@ function DishCategory(props) {
     <h2 onClick={page =='HomePage' ? '' : toggleHidden} className={"OP_Menu_Title box text-center rounded-lg " + (page =='HomePage' ? '' : 'cursor-pointer ')}>{categoryTitle}</h2>
     <div className={"OP_Menu_Dishes box " + (
       page == 'HomePage' ? 'block' :
-      isHidden == false ? 'animate_UP ':
-      isHidden == true ? 'animate_DOWN ':
+
+      isHidden == true ? 'roll_DOWN_animation ':
+      isHidden == false ? 'roll_UP_animation ':
       'hidden'
     )}>
       {dishes.map(dish =>
-        <Dish key={dish.id} dish={dish} onAdd={onAdd} isHidden={isHidden} page={page}/>
+        <Dish key={dish.id} dish={dish} onAdd={onAdd} page={page}/>
       )}
     </div>
   </div>

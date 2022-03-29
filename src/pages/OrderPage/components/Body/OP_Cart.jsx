@@ -12,7 +12,7 @@ export default function Cart(props) {
     <div id="OP_Body_Cart" className="Cart hidden sm:flex box flex-col m-4 ml-0 rounded-lg " >
 
       {/* Cart Header */}
-      <div id="OP_HeaderCart_Header" className="Cart_Header flex justify-center rounded-lg ">
+      <div className="Cart_Header flex justify-center rounded-lg ">
       {cartItems.length === 0 ?
         <div className="cartEmpty rounded-lg px-1 " >Cart is empty</div> :
         <div className="cartNotEmpty rounded-lg">

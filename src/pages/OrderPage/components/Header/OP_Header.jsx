@@ -9,16 +9,19 @@ function Header_Cart(props) {
     shippingPrice,
     totalPrice
  } = props;
-  
     return (
-
-        <div id="OP_Body_Cart" className="OP_HeaderCart flex flex-col box rounded-lg " >
+        // <div className={"OP_HeaderCart flex flex-col box rounded-lg " + (
+        //     isOpen == false ? "animate_UP " : 
+        //     isOpen == true ? "animate_DOWN " :
+        //     '' 
+        // )} >
+        <>
     
             {/* Cart Header */}
             <div id="OP_HeaderCart_Header" className="Cart_Header flex justify-center rounded-lg ">
             {cartItems.length === 0 ?
                 <div className="cartEmpty rounded-lg px-1" >Cart is empty</div> :
-                
+
                 <div className="cartNotEmpty rounded-lg">
                 <h1 className="text-center">Cart</h1>
                 <div className="cart_icon flex justify-center items-center mr-4">
@@ -31,7 +34,7 @@ function Header_Cart(props) {
             {/* Cart Items */}
             {cartItems.length !== 0 && (
                 // <div id="OP_HeaderCart_CartItems" className="OP_HeaderCart_CartItems box my-1 rounded-lg ">
-                <div id="OP_Body_Cart_Items" className="Cart_Items box my-1 rounded-lg">
+                <div className="Cart_Items box my-1 rounded-lg">
 
                 {cartItems.map((item) => (
                     <div key={item.id} className="OP_HeaderCart_CartItems_Item box rounded-md p-1.5 pt-1">
@@ -97,18 +100,18 @@ function Header_Cart(props) {
                 </div>
             </div>
             )}
-        </div>
+        </>
     )
   }
 
 export default function Header(props) {
 
-    const [isOpen, setIsOpen] = useState(false);
-    const isOpen_Toggle = () => {
+    const [isOpen, setIsOpen] = useState('start');
 
-        console.log(isOpen)
-        isOpen == false ? setIsOpen(true) : setIsOpen(false)
-        console.log('isOpen toggle works')
+    const isOpen_Toggle = () => {
+        isOpen == false ? setIsOpen(true) : 
+        isOpen == true ? setIsOpen(false) :
+        setIsOpen(true)
     }
 
     const { products, cartItems, onAdd, onRemove } = props;   
@@ -130,9 +133,7 @@ export default function Header(props) {
             </div>
 
             {/* Right icon */}
-            <div className="
-            OP_Header_RightIcon
-            ">
+            <div className=" OP_Header_RightIcon">
                 <button onClick={isOpen_Toggle} className="OP_Header_RightIcon_Button sm:hidden flex justify-center items-center m-5 p-1 pr-0 box rounded">
                     <div className=" mx-2 ">
                         <span className="ItemCount_span rounded-full py-1 px-2">{cartItems.length}</span>
@@ -145,7 +146,11 @@ export default function Header(props) {
                     </div>
 
                 </button>
-                <div className={"sm:hidden " + (isOpen == false ? " hidden" : " block")}>
+                <div className={"OP_HeaderCart flex flex-col box rounded-lg " + (
+                    isOpen == false ? "animate_UP hidden " : 
+                    isOpen == true ? "animate_DOWN block " :
+                    'hidden' 
+                )} >
                     <Header_Cart
                     products={products}
                     cartItems={cartItems}
@@ -155,6 +160,7 @@ export default function Header(props) {
                     taxPrice={taxPrice}
                     shippingPrice={shippingPrice}
                     totalPrice={totalPrice}
+                    // isOpen={isOpen}
                     />
                 </div>
             </div>

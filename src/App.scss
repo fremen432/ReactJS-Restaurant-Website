@@ -242,6 +242,7 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 .OrderPage {
 
   .OP_Header {
+    position: relative;
 
     .OP_Header_Logo {
       height: 5rem;
@@ -253,6 +254,8 @@ $drink3: url('../public/assets/images/drink3.jpeg');
     }
 
     .OP_Header_RightIcon {
+
+      // position: relative;
 
       .OP_Header_RightIcon_Button {
         background-color: $green_light3;
@@ -281,19 +284,6 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 
   .OP_Body {
 
-    .OP_Body_Menu { 
-      background-color: $green_light3; 
-      border: 1px solid $green_dark2;
-
-      .order_btn {
-        background-color: $green_dark1;
-        color: white;
-      }
-      .menu_item {
-        border: 1px solid $green_dark2;
-        background-color: $green_light2;
-      }
-    }
 
     .OP_Body_Cart { 
       background-color: $green_light3; 
@@ -489,9 +479,27 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 .Header_element:hover{
   background-color: $green_light1;
 }
+
+.OP_Body_Menu { 
+  background-color: $green_light3; 
+  border: 1px solid $green_dark2;
+
+  .order_btn {
+    background-color: $green_dark1;
+    color: white;
+  }
+  .menu_item {
+    // position: absolute;
+    // z-index: -1;
+    border: 1px solid $green_dark2;
+    background-color: $green_light2;
+  }
+}
+
+
 .animate_DOWN {
-  // animation-name: fade_IN, slide_DOWN;
-  animation-name: fade_IN, roll_DOWN;
+  animation-name: fade_IN, slide_DOWN;
+  // animation-name: fade_IN, roll_DOWN;
   animation-duration: 200ms;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
@@ -501,8 +509,8 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 }
 
 .animate_UP {
-  // animation-name: fade_OUT, slide_UP;
-  animation-name: fade_OUT, roll_UP;
+  animation-name: fade_OUT, slide_UP;
+  // animation-name: fade_OUT, roll_UP;
   animation-duration: 200ms;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
@@ -513,7 +521,7 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 }
 
 .roll_UP_animation {
-  animation-name: roll_UP;
+  animation-name: fade_OUT, roll_UP;
   animation-duration: 200ms;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
@@ -522,15 +530,13 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 }
 
 .roll_DOWN_animation {
-  animation-name: roll_DOWN;
+  animation-name: fade_IN, roll_DOWN;
   animation-duration: 200ms;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
   // animation-delay: 200ms;
   overflow: hidden;
 }
-
-
 
 @keyframes fade_IN {
   0% {
