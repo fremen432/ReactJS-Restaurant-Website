@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 
 export default function Cart(props) {
@@ -11,8 +9,9 @@ export default function Cart(props) {
     const totalPrice = itemsPrice + taxPrice + shippingPrice;
 
     return (
-        <div className={"flex flex-col box rounded-lg " + (
-            headerORbody != 'header' ? 'block Cart ' :
+        <div className={"flex-col rounded-lg box " + (
+            headerORbody != 'header' ? 'Cart hidden sm:flex m-4 ml-0 rounded-lg ' :
+
             isOpen == false ? "OP_HeaderCart animate_UP hidden " : 
             isOpen == true ? "OP_HeaderCart animate_DOWN block " :
             'OP_HeaderCart hidden' 
@@ -32,10 +31,9 @@ export default function Cart(props) {
             </div>
     
             {/* Cart Items */}
-            {cartItems.length !== 0 && (
-                // <div id="OP_HeaderCart_CartItems" className="OP_HeaderCart_CartItems box my-1 rounded-lg ">
-                <div className="Cart_Items box my-1 rounded-lg">
+            {cartItems.length >= 1 && (
 
+                <div className="Cart_Items box my-1 rounded-lg">
                 {cartItems.map((item) => (
                     <div key={item.id} className="OP_HeaderCart_CartItems_Item box rounded-md p-1.5 pt-1">
                         <div className="col-2">{item.name}</div>
@@ -58,7 +56,7 @@ export default function Cart(props) {
             )}
 
             {/* Total price */}
-            {cartItems.length !== 0 && (
+            {cartItems.length >= 1 && (
             <div id="OP_HeaderCart_Total" className="Cart_Total px-2 pb-1 grid rounded-lg">
                 <div className="grid grid-cols-2 m-1">
                 <div className="">Items Price</div>

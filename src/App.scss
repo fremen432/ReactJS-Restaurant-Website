@@ -71,8 +71,6 @@ $drink3: url('../public/assets/images/drink3.jpeg');
       align-items: center;
     
       li {
-        // margin-right: 1rem;
-    
         a {
           color: black;
           text-decoration: none;
@@ -98,6 +96,9 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 
     .dropdown-location {
       padding: 5px;
+      width: 100%;
+      display: inline-block;
+      border-radius: 5px;
     }
 
     .dropdown-location:hover {
@@ -119,15 +120,8 @@ $drink3: url('../public/assets/images/drink3.jpeg');
       }
 
       .home_hero_parent{ 
-
-        // height: calc(100vh - $header_footer_height);
-        // min-height: 738px;
-
         position: relative;
-        // min-height: 738px;
-        // overflow: hidden;
-
-       }
+      }
 
       .home_hero_children{
         height: calc(100vh - $header_footer_height);
@@ -139,7 +133,6 @@ $drink3: url('../public/assets/images/drink3.jpeg');
         left:0%;
         right:0%;
 
-        // min-height: 738px;
         overflow: hidden;
 
       }
@@ -196,11 +189,8 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 }
 
 .BgHeroImage_child1_image {
-  // background-image: $insideStore1; 
   background-position: 80%;
   background-size: cover;
-
-  // background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/times-square-perspective.jpg);
 }
 
 .BgHeroImage_child2_fade {
@@ -396,10 +386,6 @@ $drink3: url('../public/assets/images/drink3.jpeg');
   color: white;
 }
 
-.OP_Menu_Dishes{
-  // display: none;
-}
-
 .logo_HP_Header{
   width: 15rem;
 }
@@ -472,7 +458,7 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 }
 
 .Header_element:hover{
-  background-color: $green_light1;
+  background-color: $green_light3;
 }
 
 .OP_Body_Menu { 
@@ -493,7 +479,7 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 
 
 .animate_DOWN {
-  animation-name: fade_IN, slide_DOWN;
+  animation-name: fade_IN, slide_DOWN, displayBlock;
   // animation-name: fade_IN, roll_DOWN;
   animation-duration: 200ms;
   animation-fill-mode: forwards;
@@ -504,7 +490,7 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 }
 
 .animate_UP {
-  animation-name: fade_OUT, slide_UP;
+  animation-name: fade_OUT, slide_UP, displayHidden;
   // animation-name: fade_OUT, roll_UP;
   animation-duration: 200ms;
   animation-fill-mode: forwards;
@@ -586,5 +572,22 @@ $drink3: url('../public/assets/images/drink3.jpeg');
   }
   100% {
     max-height: 0px;
+  }
+}
+
+@keyframes displayBlock {
+  0% {
+    display: hidden;
+  }
+  100% {
+    display: block;
+  }
+}
+@keyframes displayHidden {
+  0% {
+    display: block;
+  }
+  100% {
+    display: hidden;
   }
 }

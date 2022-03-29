@@ -9,8 +9,6 @@ import OrderPage from './pages/OrderPage/OP_Index';
 
 function App() {
 
-  document.onscroll = () => {console.log('this is being scrolled')}
-
   return (
     <div className="App">
       <Router>
