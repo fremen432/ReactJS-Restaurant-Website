@@ -5,7 +5,13 @@ import Logo from '../../../../misc-componenets/Logo';
 const Header__element = 'Header_element  '
 
 const DropDown = (props) => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState('start');
+    const isOpen_Toggle = () => {
+        setIsOpen(
+            isOpen == false ? true : 
+            isOpen == true ? false :
+            true );
+    }
 
     document.onclick = (e) => {
       if (e.target.id !== 'dropdown_btn') { 
@@ -13,22 +19,17 @@ const DropDown = (props) => {
         setIsOpen(false) 
       }
     }
-  
-
-    // const { setIsOpen, isOpen } = props
-    const isOpen_Toggle = () => setIsOpen( isOpen == false ? true : false)
-
-
 
     return(
         <li  className={Header__element + "dropdown "}>
             <button id="dropdown_btn" className="dropdown__button" onClick={ isOpen_Toggle } >Order</button>
             <div className="">
 
-                <ul className={"dropdown-content " + ( 
-
-                    isOpen == false ? "animate_UP " : "animate_DOWN "
-                    )}>
+                <ul className={"dropdown-content " + (
+                    isOpen == false ? "animate_UP" : 
+                    isOpen == true ? "animate_DOWN ":
+                    'hidden'
+                )}>
                     <li className="dropdown-location "><a href="/order">Dripping Springs</a></li>
                     <li className="dropdown-location"><a href="/order">Bee Cave</a></li>
                     <li className="dropdown-location"><a href="/order">Marble Falls</a></li>

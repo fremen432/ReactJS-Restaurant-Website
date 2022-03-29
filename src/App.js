@@ -9,11 +9,7 @@ import OrderPage from './pages/OrderPage/OP_Index';
 
 function App() {
 
-  document.body.onscroll = function(){console.log('this is being scrolled')}
-
-  // document.addEventListener('scroll', e => {
-  //   console.log('this is scrolled')
-  // })
+  document.onscroll = () => {console.log('this is being scrolled')}
 
   return (
     <div className="App">
