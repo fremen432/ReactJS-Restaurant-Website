@@ -86,11 +86,8 @@ $drink3: url('../public/assets/images/drink3.jpeg');
     }
     .dropdown-content {
       position: absolute;
-      left: 0px;
-      right: 0px;
+      left: -45px;
       top: 35px;
-      // margin-top: 10px;
-      // top: 0px;
 
       background-color: rgba(255, 255, 255, 0.65);
       min-width: 140px;
@@ -254,8 +251,6 @@ $drink3: url('../public/assets/images/drink3.jpeg');
     }
 
     .OP_Header_RightIcon {
-
-      // position: relative;
 
       .OP_Header_RightIcon_Button {
         background-color: $green_light3;

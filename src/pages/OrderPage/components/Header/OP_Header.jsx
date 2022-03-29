@@ -1,108 +1,108 @@
 import { useState } from 'react';
-
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 
-function Header_Cart(props) {
-    const { cartItems, onAdd, onRemove, 
-    itemsPrice,
-    taxPrice,
-    shippingPrice,
-    totalPrice
- } = props;
-    return (
-        // <div className={"OP_HeaderCart flex flex-col box rounded-lg " + (
-        //     isOpen == false ? "animate_UP " : 
-        //     isOpen == true ? "animate_DOWN " :
-        //     '' 
-        // )} >
-        <>
-    
-            {/* Cart Header */}
-            <div id="OP_HeaderCart_Header" className="Cart_Header flex justify-center rounded-lg ">
-            {cartItems.length === 0 ?
-                <div className="cartEmpty rounded-lg px-1" >Cart is empty</div> :
+import Cart from '../../../../misc-componenets/Cart';
 
-                <div className="cartNotEmpty rounded-lg">
-                <h1 className="text-center">Cart</h1>
-                <div className="cart_icon flex justify-center items-center mr-4">
-                    <AiOutlineShoppingCart className=" h-full w-5 mr-1" />
-                    <span className="text-s ">{cartItems.length}</span>
-                </div>
-                </div>}
-            </div>
-    
-            {/* Cart Items */}
-            {cartItems.length !== 0 && (
-                // <div id="OP_HeaderCart_CartItems" className="OP_HeaderCart_CartItems box my-1 rounded-lg ">
-                <div className="Cart_Items box my-1 rounded-lg">
+// function Header_Cart(props) {
+//     const { cartItems, onAdd, onRemove, 
+//     itemsPrice,
+//     taxPrice,
+//     shippingPrice,
+//     totalPrice,
+//     isOpen
+//  } = props;
+//     return (
+//         <div className={"OP_HeaderCart flex flex-col box rounded-lg " + (
+//             isOpen == false ? "animate_UP hidden " : 
+//             isOpen == true ? "animate_DOWN block " :
+//             'hidden' 
+//         )} >
+//             {/* Cart Header */}
+//             <div id="OP_HeaderCart_Header" className="Cart_Header flex justify-center rounded-lg ">
+//             {cartItems.length === 0 ?
+//                 <div className="cartEmpty rounded-lg px-1" >Cart is empty</div> :
 
-                {cartItems.map((item) => (
-                    <div key={item.id} className="OP_HeaderCart_CartItems_Item box rounded-md p-1.5 pt-1">
-                        <div className="col-2">{item.name}</div>
-                        <div className="grid grid-cols-2 ">
-                            <div className="">
-                                <button onClick={() => onRemove(item)} className="remove  ">
-                                -
-                                </button>
-                                <button onClick={() => onAdd(item)} className="add  ">
-                                +
-                                </button>
-                            </div>
-                            <div className="text-right">
-                                {item.qty} x ${item.price}
-                            </div>
-                        </div>
-                    </div>
-                ))}
-                </div>
-            )}
+//                 <div className="cartNotEmpty rounded-lg">
+//                 <h1 className="text-center">Cart</h1>
+//                 <div className="cart_icon flex justify-center items-center mr-4">
+//                     <AiOutlineShoppingCart className=" h-full w-5 mr-1" />
+//                     <span className="text-s ">{cartItems.length}</span>
+//                 </div>
+//                 </div>}
+//             </div>
+    
+//             {/* Cart Items */}
+//             {cartItems.length !== 0 && (
+//                 // <div id="OP_HeaderCart_CartItems" className="OP_HeaderCart_CartItems box my-1 rounded-lg ">
+//                 <div className="Cart_Items box my-1 rounded-lg">
 
-            {/* Total price */}
-            {cartItems.length !== 0 && (
-            <div id="OP_HeaderCart_Total" className="Cart_Total px-2 pb-1 grid rounded-lg">
-                <div className="grid grid-cols-2 m-1">
-                <div className="">Items Price</div>
-                <div className=" text-right">${itemsPrice.toFixed(2)}</div>
-                </div>
+//                 {cartItems.map((item) => (
+//                     <div key={item.id} className="OP_HeaderCart_CartItems_Item box rounded-md p-1.5 pt-1">
+//                         <div className="col-2">{item.name}</div>
+//                         <div className="grid grid-cols-2 ">
+//                             <div className="">
+//                                 <button onClick={() => onRemove(item)} className="remove  ">
+//                                 -
+//                                 </button>
+//                                 <button onClick={() => onAdd(item)} className="add  ">
+//                                 +
+//                                 </button>
+//                             </div>
+//                             <div className="text-right">
+//                                 {item.qty} x ${item.price}
+//                             </div>
+//                         </div>
+//                     </div>
+//                 ))}
+//                 </div>
+//             )}
+
+//             {/* Total price */}
+//             {cartItems.length !== 0 && (
+//             <div id="OP_HeaderCart_Total" className="Cart_Total px-2 pb-1 grid rounded-lg">
+//                 <div className="grid grid-cols-2 m-1">
+//                 <div className="">Items Price</div>
+//                 <div className=" text-right">${itemsPrice.toFixed(2)}</div>
+//                 </div>
     
-                <div className="grid grid-cols-2 m-1 mt-0">
-                <div className="">Tax Price</div>
-                <div className=" text-right">${taxPrice.toFixed(2)}</div>
-                </div>
+//                 <div className="grid grid-cols-2 m-1 mt-0">
+//                 <div className="">Tax Price</div>
+//                 <div className=" text-right">${taxPrice.toFixed(2)}</div>
+//                 </div>
     
-                <div className="grid grid-cols-2 m-1 mt-0">
-                <div className="">Shipping Price</div>
-                <div className=" text-right">
-                    ${shippingPrice.toFixed(2)}
-                </div>
-                </div>
+//                 <div className="grid grid-cols-2 m-1 mt-0">
+//                 <div className="">Shipping Price</div>
+//                 <div className=" text-right">
+//                     ${shippingPrice.toFixed(2)}
+//                 </div>
+//                 </div>
     
-                <div className="TotalPrice grid grid-cols-2 m-1 px-1 header_1">
-                <div className="">
-                    <strong>Total Price</strong>
-                </div>
-                <div className=" text-right">
-                    <strong>${totalPrice.toFixed(2)}</strong>
-                </div>
-                </div>
+//                 <div className="TotalPrice grid grid-cols-2 m-1 px-1 header_1">
+//                 <div className="">
+//                     <strong>Total Price</strong>
+//                 </div>
+//                 <div className=" text-right">
+//                     <strong>${totalPrice.toFixed(2)}</strong>
+//                 </div>
+//                 </div>
     
-                <div className="horizontal_line"></div>
+//                 <div className="horizontal_line"></div>
     
-                <div className="flex justify-center items-center">
-                <button className="CheckoutBtn m-1 p-1 rounded w-full" onClick={
-                    () => {
-                    let customersOrder = cartItems.map(el => ({ dish: el.name, qty: el.qty }))
-                    alert(JSON.stringify(customersOrder))
-                    }
-                }>
-                    Checkout
-                </button>
-                </div>
-            </div>
-            )}
-        </>
-    )
-  }
+//                 <div className="flex justify-center items-center">
+//                 <button className="CheckoutBtn m-1 p-1 rounded w-full" onClick={
+//                     () => {
+//                     let customersOrder = cartItems.map(el => ({ dish: el.name, qty: el.qty }))
+//                     alert(JSON.stringify(customersOrder))
+//                     }
+//                 }>
+//                     Checkout
+//                 </button>
+//                 </div>
+//             </div>
+//             )}
+//         </div>
+//     )
+//   }
 
 export default function Header(props) {
 
@@ -146,12 +146,15 @@ export default function Header(props) {
                     </div>
 
                 </button>
-                <div className={"OP_HeaderCart flex flex-col box rounded-lg " + (
-                    isOpen == false ? "animate_UP hidden " : 
-                    isOpen == true ? "animate_DOWN block " :
-                    'hidden' 
-                )} >
-                    <Header_Cart
+                    <Cart
+                    products={products}
+                    cartItems={cartItems}
+                    onAdd={onAdd}
+                    onRemove={onRemove}
+                    isOpen={isOpen}
+                    headerORbody={'header'}
+                    />
+                    {/* <Header_Cart
                     products={products}
                     cartItems={cartItems}
                     onAdd={onAdd}
@@ -160,9 +163,8 @@ export default function Header(props) {
                     taxPrice={taxPrice}
                     shippingPrice={shippingPrice}
                     totalPrice={totalPrice}
-                    // isOpen={isOpen}
-                    />
-                </div>
+                    isOpen={isOpen}
+                    /> */}
             </div>
         </div>
     )
