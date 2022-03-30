@@ -30,6 +30,7 @@ export default function Header(props) {
 
             {/* Right icon */}
             <div className=" OP_Header_RightIcon">
+
                 <button onClick={isOpen_Toggle} className="OP_Header_RightIcon_Button flex justify-center items-center sm:hidden m-5 p-1 pr-0 box rounded">
                     <div className=" mx-2 ">
                         <span className="ItemCount_span rounded-full py-1 px-2">{cartItems.length}</span>
@@ -41,6 +42,7 @@ export default function Header(props) {
                         <AiOutlineShoppingCart className=" h-full w-5 mr-1" />
                     </div>
                 </button>
+
                 <Cart
                 products={products}
                 cartItems={cartItems}
@@ -49,6 +51,7 @@ export default function Header(props) {
                 isOpen={isOpen}
                 headerORbody={'header'}
                 />
+                
             </div>
         </div>
     )
