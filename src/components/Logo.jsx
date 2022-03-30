@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 export default function Logo(props) {
 
     const { position } = props;
@@ -8,9 +9,9 @@ export default function Logo(props) {
         { position == 'header' ?
 
             <div className={"Logo Logo_Header  " }>
-                <a className={ aTagClasses } href="/">
+                <Link className={ aTagClasses } to="/">
                     <img src="assets/Simply-Pho-House.png" alt="restaurant Logo" /> 
-                </a> 
+                </Link> 
             </div> :
 
             <img className="Logo Logo_Home box " src="assets/Simply-Pho-House.png" alt="restaurant Logo" />

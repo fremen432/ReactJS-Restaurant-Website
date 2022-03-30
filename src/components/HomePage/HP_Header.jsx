@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import Logo from '../Logo';
 
@@ -28,9 +29,9 @@ const DropDown = (props) => {
                     isOpen == true ? "animate_DOWN block ":
                     'hidden '
                 )}>
-                    <li><a className="dropdown-location box" href="/order">Dripping Springs</a></li>
-                    <li><a className="dropdown-location box" href="/order">Bee Cave</a></li>
-                    <li><a className="dropdown-location box" href="/order">Marble Falls</a></li>
+                    <li><Link className="dropdown-location box" to="/order">Dripping Springs</Link></li>
+                    <li><Link className="dropdown-location box" to="/order">Bee Cave</Link></li>
+                    <li><Link className="dropdown-location box" to="/order">Marble Falls</Link></li>
                 </ul>
             </div>
         </li>
