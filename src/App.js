@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.scss';
 
 //  Page imports
-import Homepage from './pages/HomePage';
-import OrderPage from './pages/OrderPage';
+import HomePage from './pages/index.jsx'
+import OrderPage from './pages/Orderpage.jsx';
 
 function App() {
 
@@ -18,7 +18,7 @@ function App() {
 
       {/* <Router> */}
         <Routes>
-          <Route exact path='/' element={<Homepage />} />
+          <Route exact path='/' element={<HomePage />} />
           <Route exact path='/order' element={<OrderPage />} />
           {/* <Route exact path='/' element={Homepage} />
           <Route exact path='/order' element={OrderPage} /> */}

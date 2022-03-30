@@ -1,5 +1,5 @@
-import Cart from '../../../misc-componenets/Cart';
-import Menu from '../../../misc-componenets/Menu';
+import Cart from '../Cart';
+import Menu from '../Menu';
 
 export default function Body(props) {
 

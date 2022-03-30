@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 
-import Cart from '../../../misc-componenets/Cart';
-import Logo from '../../../misc-componenets/Logo';
+import Cart from '../Cart';
+import Logo from '../Logo';
 
 export default function Header(props) {
 
@@ -51,7 +51,7 @@ export default function Header(props) {
                 isOpen={isOpen}
                 headerORbody={'header'}
                 />
-                
+
             </div>
         </div>
     )

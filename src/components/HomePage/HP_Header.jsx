@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import Logo from '../../../../misc-componenets/Logo';
+import Logo from '../Logo';
 
 const Header__element = 'Header_element '
 

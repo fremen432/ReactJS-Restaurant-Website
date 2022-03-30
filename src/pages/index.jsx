@@ -1,8 +1,9 @@
-import Header from './components/Header/HP_Header';
-import Body from './components/Body/HP_Body';
-import Footer from '../../misc-componenets/Footer';
+import Header from '../components/HomePage/HP_Header';
+import Body from '../components/HomePage/HP_Body';
+import Footer from '../components/Footer';
 
-const HomePage = (props) => {
+export default function HomePage(props){
+
     const { setIsOpen, isOpen } = props
 
     return (
@@ -15,5 +16,3 @@ const HomePage = (props) => {
         </div>
     )
 }
-
-export default HomePage;

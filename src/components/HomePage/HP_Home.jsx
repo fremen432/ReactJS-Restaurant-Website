@@ -1,5 +1,5 @@
-import { hours, locations } from '../../../../Data'
-import Logo from '../../../../misc-componenets/Logo'
+import { hours, locations } from '../../Data.js'
+import Logo from '../Logo'
 
 export default function Home() {
   return (
