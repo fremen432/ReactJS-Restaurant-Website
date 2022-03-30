@@ -9,22 +9,23 @@ export default function Cart(props) {
     const totalPrice = itemsPrice + taxPrice + shippingPrice;
 
     return (
-        <div className={"flex-col rounded-lg box " + (
-            headerORbody != 'header' ? 'Cart hidden sm:flex m-4 ml-0 rounded-lg ' :
+        <div className={`flex-col rounded-lg box 
+        ` + (
+            headerORbody != 'header' ? 'BodyCart hidden sm:flex m-4 ml-0 rounded-lg ' :
 
-            isOpen == false ? "OP_HeaderCart animate_UP hidden " : 
-            isOpen == true ? "OP_HeaderCart animate_DOWN block " :
-            'OP_HeaderCart hidden' 
+            isOpen == false ? "HeaderCart sm:hidden animate_UP hidden" : 
+            isOpen == true ? "HeaderCart sm:hidden animate_DOWN block" :
+            'HeaderCart hidden' 
         )} >
             {/* Cart Header */}
-            <div id="OP_HeaderCart_Header" className="Cart_Header flex justify-center rounded-lg ">
+            <div id="Cart_Header" className="Cart_Header flex justify-center rounded-lg ">
             {cartItems.length === 0 ?
                 <div className="cartEmpty rounded-lg px-1" >Cart is empty</div> :
 
                 <div className="cartNotEmpty rounded-lg">
                     <h1 className="text-center">Cart</h1>
-                    <div className="cart_icon flex justify-center items-center mr-4">
-                        <AiOutlineShoppingCart className=" h-full w-5 mr-1" />
+                    <div className="flex justify-center items-center mr-4">
+                        <AiOutlineShoppingCart className="h-full w-5 mr-1 " />
                         <span className="text-s ">{cartItems.length}</span>
                     </div>
                 </div>}
@@ -34,15 +35,15 @@ export default function Cart(props) {
             {cartItems.length >= 1 && (
 
                 <div className="Cart_Items box my-1 rounded-lg">
-                {cartItems.map((item) => (
-                    <div key={item.id} className="OP_HeaderCart_CartItems_Item box rounded-md p-1.5 pt-1">
+                {cartItems.map( item => (
+                    <div key={item.id} className="Cart_Items_Item box rounded-md p-1.5 pt-1">
                         <div className="col-2">{item.name}</div>
                         <div className="grid grid-cols-2 ">
                             <div className="">
-                                <button onClick={() => onRemove(item)} className="remove  ">
+                                <button onClick={() => onRemove(item)} className="minusBtn ">
                                 -
                                 </button>
-                                <button onClick={() => onAdd(item)} className="add  ">
+                                <button onClick={() => onAdd(item)} className="plusBtn ">
                                 +
                                 </button>
                             </div>
@@ -57,7 +58,7 @@ export default function Cart(props) {
 
             {/* Total price */}
             {cartItems.length >= 1 && (
-            <div id="OP_HeaderCart_Total" className="Cart_Total px-2 pb-1 grid rounded-lg">
+            <div id="Cart_Total" className="Cart_Total px-2 pb-1 grid rounded-lg">
                 <div className="grid grid-cols-2 m-1">
                 <div className="">Items Price</div>
                 <div className=" text-right">${itemsPrice.toFixed(2)}</div>
@@ -87,7 +88,7 @@ export default function Cart(props) {
                 <div className="horizontal_line"></div>
     
                 <div className="flex justify-center items-center">
-                <button className="CheckoutBtn m-1 p-1 rounded w-full" onClick={
+                <button className="Style_darkBtn m-1 " onClick={
                     () => {
                     let customersOrder = cartItems.map(el => ({ dish: el.name, qty: el.qty }))
                     alert(JSON.stringify(customersOrder))

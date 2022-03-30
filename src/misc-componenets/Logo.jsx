@@ -1,17 +1,20 @@
 export default function Logo(props) {
-    
-    const { classes, position } = props;
-    const aTagClasses = 'logo_HP_Header box'
+
+    const { position } = props;
+    const aTagClasses = 'Logo_Header '
 
     return(
-        <div className={"logo " + classes}>
-            {
-                position == 'header' ?
-                <a className={aTagClasses} href="/">
-                    <img src="assets/Simply-Pho-House.png" alt="restaurant logo" /> 
-                </a> :
-                <img src="assets/Simply-Pho-House.png" alt="restaurant logo" />
-            }
-        </div>
+        <>
+        { position == 'header' ?
+
+            <div className={"Logo Logo_Header  " }>
+                <a className={ aTagClasses } href="/">
+                    <img src="assets/Simply-Pho-House.png" alt="restaurant Logo" /> 
+                </a> 
+            </div> :
+
+            <img className="Logo Logo_Home box " src="assets/Simply-Pho-House.png" alt="restaurant Logo" />
+        }
+        </> 
     )
 }

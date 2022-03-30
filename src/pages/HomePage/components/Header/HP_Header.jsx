@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import Logo from '../../../../misc-componenets/Logo';
 
-const Header__element = 'Header_element rounded-xl '
+const Header__element = 'Header_element '
 
 const DropDown = (props) => {
     const [isOpen, setIsOpen] = useState('start');
@@ -42,7 +42,7 @@ export default function Header(props) {
     return (
         <div className="HP_Header">
 
-            <Logo classes={"logo_HP_Header box " } position='header' />
+            <Logo position='header' />
 
             <ul className="navbar_elements text-sm box sm:text-md mx-2 sm:mr-8">
                 <li><a className={Header__element + ''}  href="#Home">Home</a></li>

@@ -10,8 +10,9 @@ export default function Home() {
         <div className=" home_hero_children home_hero_child2_fade"></div>
 
         <div id="Home" className="home_hero_children home_hero_child3_textContent snap-element">
-          {/* <h1 className="restaurant_name" >SIMPLY PHO HOUSE</h1> */}
-          <Logo classes={'logo_HP_Home mx-4 box '}/>
+          
+          <Logo classes={'Logo_Home mx-4 '}/>
+
           <h2 className="italic text-md box md:text-2xl">Central Texas Vietnamese Food & Asian Fusion</h2>
           <div className="description" >
 

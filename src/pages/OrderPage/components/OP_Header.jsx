@@ -23,10 +23,10 @@ export default function Header(props) {
 
     return (
 
-        <div id="SECTION__Header" className="OP_Header Header box flex justify-between ">
+        <div id="SECTION__Header" className="OP_Header Header ">
 
             {/* Logo */}
-            <Logo classes='OP_Header_Logo' position='header' />
+            <Logo position='header' />
 
             {/* Right icon */}
             <div className=" OP_Header_RightIcon">

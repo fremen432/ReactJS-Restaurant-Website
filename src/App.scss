@@ -1,5 +1,4 @@
 // .box { border: 1px solid black}
-// .box2 { border: 2px solid black}
 
 $min_height: 700px;
 
@@ -38,6 +37,11 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 
 .flex-center { display: flex; justify-content: center; align-items: center; }
 
+.body_footer_wrapper {
+  max-height: calc(100vh - $header_footer_height);
+  overflow-y: auto;
+}
+
 .OP_Header, .OP_Footer, .HP_Header, .HP_Footer .Footer {
   border: 1px solid $green_dark1;
   background-color: $green_light2;
@@ -46,6 +50,10 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 
   display: flex;
   justify-content: space-between;
+}
+
+.OP_Header {
+  position: relative;
 }
 
 .Footer{
@@ -60,127 +68,123 @@ $drink3: url('../public/assets/images/drink3.jpeg');
   align-items: center;
 }
 
-.footer-element {
-  margin-right: 20px;
+.Header_element, .footer-element{
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
 }
 
-.app, .HomePage {
-
-  .HP_Header {
-    
-    .navbar_elements {
-      list-style-type: none;
-    
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    
-      li {
-        a {
-          color: black;
-          text-decoration: none;
-        }
-      }
-    }
-  
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    .dropdown-content {
-      position: absolute;
-      left: -45px;
-      top: 35px;
-
-      background-color: rgba(255, 255, 255, 0.65);
-      min-width: 140px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      padding: 10px 10px;
-      z-index: 1;
-    }
-
-    .dropdown-location {
-      padding: 5px;
-      width: 100%;
-      display: inline-block;
-      border-radius: 5px;
-    }
-
-    .dropdown-location:hover {
-      background-color: $green_light2;
-    }
-  }
-  .body_footer_wrapper {
-    max-height: calc(100vh - $header_footer_height);
-    overflow-y: auto;
-  
-    .Body {
-      
-      .snap-type-y{
-        scroll-snap-type: y mandatory;
-      }
-
-      .snap-element{
-        scroll-snap-align: start;
-      }
-
-      .home_hero_parent{ 
-        position: relative;
-      }
-
-      .home_hero_children{
-        height: calc(100vh - $header_footer_height);
-        min-height: $min_height;
-        position: absolute;
-
-        top:0%;
-        bottom:0%;
-        left:0%;
-        right:0%;
-
-        overflow: hidden;
-
-      }
-
-      .home_hero_child1_image {
-        background-image: $insideStore2; 
-        background-position: 80%;
-        background-size: cover;
-      }
-
-      .home_hero_child2_fade {
-        background-color: $green_light3; 
-        opacity: 70%;
-        position: relative;
-      }
-  
-      .home_hero_child3_textContent { 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-      
-        .locations {
-          margin-top: 1rem;
-          margin-bottom: 1rem;
-          width: 100%;
-        }
-        .hours {
-          margin-bottom: 1rem;
-          width: 100%;
-        }
-      }
-
-      .Menu { 
-        background-color: $green_light2; 
-        scroll-snap-align: start;
-
-      }
-    }
-  }
+.Header_element:hover, .footer-element:hover{
+  background-color: $green_light3;
 }
 
-.BgHeroImage_parent{ position: relative; }
+.OP_Header_RightIcon_Button {
+  background-color: $green_light3;
+  border: 1px solid $green_dark1;
+}
+
+.ItemCount_span {
+  background-color: black;
+  color: white;
+}
+
+.navbar_elements {
+  list-style-type: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar_elements li a {
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  position: absolute;
+  left: -45px;
+  top: 35px;
+
+  background-color: rgba(255, 255, 255);
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 10px 10px;
+  z-index: 1;
+}
+
+.dropdown-location {
+  padding: 5px;
+  width: 100%;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.dropdown-location:hover {
+  background-color: $green_light2;
+}
+
+.snap-type-y{
+  scroll-snap-type: y mandatory;
+}
+
+.snap-element{
+  scroll-snap-align: start;
+}
+
+.home_hero_parent{ 
+  position: relative;
+}
+
+.home_hero_children{
+  height: calc(100vh - $header_footer_height);
+  min-height: $min_height;
+  position: absolute;
+
+  top:0%;
+  bottom:0%;
+  left:0%;
+  right:0%;
+
+  overflow: hidden;
+}
+
+.home_hero_child1_image {
+  background-image: $insideStore2; 
+  background-position: 80%;
+  background-size: cover;
+}
+
+.home_hero_child2_fade {
+  background-color: $green_light3; 
+  opacity: 70%;
+  position: relative;
+}
+
+.home_hero_child3_textContent { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.locations {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.hours {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.BgHeroImage_parent{
+  position: relative;
+}
 
 .BgHeroImage_children{
   height: calc(100vh - $header_footer_height - $header_footer_height);
@@ -225,162 +229,109 @@ $drink3: url('../public/assets/images/drink3.jpeg');
   background-size: cover;
 }
 
+.Total_Price { 
+  background-color: rgb(255, 238, 0);
+  border: 2px solid black;
+}
+.Total_Btn {
+  background-color: rgb(209, 130, 146);
+}
 
-.OrderPage {
-
-  .OP_Header {
-    position: relative;
-
-    .OP_Header_Logo {
-      height: 5rem;
-      width: 15rem;
-    
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .OP_Header_RightIcon {
-
-      .OP_Header_RightIcon_Button {
-        background-color: $green_light3;
-        border: 1px solid $green_dark1;
-
-        .ItemCount_span {
-          background-color: black;
-          color: white;
-        }
-      }
+.HeaderCart, .BodyCart {
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   
-      .OP_HeaderCart {
-        position: absolute;
-        z-index: 1;
+  border: 1px solid $green_dark2;
+  background-color: $green_light3;
+  max-height: $relativeVH;
 
-        left: 0;
-        right:0;
+  padding: 10px 10px;
+}
 
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+.HeaderCart {
+  position: absolute;
+  z-index: 1;
 
-        margin-left: 20px;
-        margin-right: 20px;
-      }
-    }
-  }
+  left: 0;
+  right:0;
 
-  .OP_Body {
+  margin-left: 20px;
+  margin-right: 20px;
+  overflow: auto;
+}
 
+.cartEmpty, .cartNotEmpty {
+  border: 1px solid $green_dark1;
+  width: 100%;
 
-    .OP_Body_Cart { 
-      background-color: $green_light3; 
-      height: $relativeVH;
-      // border: 1px solid $green_dark1;
+  display: flex;
+  justify-content: center;
+}
 
-      .OP_Body_Cart_Header {
-        background-color: $green_light2;
-      }
-    
-      .OP_Body_Cart_Items {
-        background-color: rgb(4, 131, 0);
-        overflow-y: auto;
-  
-        .Cart_Item {
-          margin: .5rem;
-          background-color: rgb(9, 255, 0);
-        }
-      }
-    
-      .OP_Body_Cart_Total {
-        background-color: rgb(255, 249, 167);
+.Cart_Header {
+  background-color: $green_light2;
+}
 
-        .Total_Price { background-color: rgb(255, 238, 0);
-        border: 2px solid black
-        }
-        .Total_Btn {
-          background-color: rgb(209, 130, 146);
-        }
-      }
-    
-    }
+.Cart_Items {
+  border: 1px solid $green_dark1;
+  background-color: $green_dark1;
+  overflow-y: auto;
+  max-height: 50vh;
+}
 
-  }
+.Cart_Items_Item {
+  margin: .5rem;
+  background-color: $green_light3;
+}
 
-  .OP_HeaderCart, .Cart {
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+.Cart_Total {
+  border: 1px solid $green_dark1;
+  background-color: $green_light2;
+}
 
-    background-color: $green_light3; 
-    max-height: $relativeVH;
+.horizontal_line {
+  background-color: $green_dark2;
+  height: 2px;
+}
+.TotalPrice { 
+  background-color: rgb(255, 246, 125);
+  border: 2px solid black
+}
+.CheckoutBtn {
+  background-color: $green_dark1;
+  color: white;
+}
 
-    padding: 10px 10px;
+.minusBtn, .plusBtn {
+  background-color: $green_dark1;
+  color: white;
 
-    .cartEmpty{
-      border: 1px solid $green_dark1;
-      width: 100%;
-      display: flex;
-      justify-content: center;
+  margin-right: 0.25rem;
 
-    }
-    .cartNotEmpty {
-      border: 1px solid $green_dark1;
-      display: flex;
-      justify-content: center;
-      width: 100%;
-    }
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 
-    .OP_HeaderCart_Header, .Cart_Header {
-      background-color: $green_light2;
-    }
-  
-    .OP_HeaderCart_CartItems, .Cart_Items {
-      border: 1px solid $green_dark1;
-      background-color: $green_dark1;
-      overflow-y: auto;
-      // max-height: 40vh;
-
-      .OP_HeaderCart_CartItems_Item, .dish {
-        margin: .5rem;
-        background-color: $green_light3;
-      }
-    }
-  
-    .Cart_Total {
-      border: 1px solid $green_dark1;
-      background-color: $green_light2;
-
-      .horizontal_line {
-        background-color: $green_dark2;
-        height: 2px;
-
-      }
-      .TotalPrice { 
-        background-color: rgb(255, 246, 125);
-        border: 2px solid black
-      }
-      .CheckoutBtn {
-        background-color: $green_dark1;
-        color: white;
-      }
-    }
-  
-  }
-
-  .remove, .add {
-    background-color: $green_dark1;
-    color: white;
-
-    margin-right: 0.25rem;
-
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-
-    border-radius: 0.5rem; 
-  }
+  border-radius: 0.5rem; 
 }
 
 .contact-submit{
   background-color: $green_dark1;
   color: white;
-
 }
+
+.Style_darkBtn {
+  background-color: $green_dark1;
+  color: white;
+  border-radius: 8px;
+  padding: 5px;
+  width: 100%;
+}
+
+.Menu_Component { 
+  background-color: $green_light3; 
+  border: 1px solid $green_dark2;
+  // scroll-snap-align: start;
+}
+
 .Menu_Title {
   background-color: $green_dark1;
   color: white;
@@ -389,18 +340,18 @@ $drink3: url('../public/assets/images/drink3.jpeg');
   padding-bottom: 5px;
 }
 
-.logo_HP_Header{
-  width: 15rem;
-}
-
-.logo_HP_Home{
-  max-width: 50rem;
-}
-
-.logo {
+.Logo {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.Logo_Header{
+  width: 15rem;
+}
+
+.Logo_Home{
+  max-width: 50rem;
 }
 
 .bg-1{
@@ -416,7 +367,6 @@ $drink3: url('../public/assets/images/drink3.jpeg');
   font-weight: bold;
 }
 .ContactUs_Wrapper{
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -426,10 +376,9 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 
   height: calc(100vh - $header_footer_height - $header_footer_height);
   min-height: 350px;
-
-  
 }
-.ContactUs_img {
+
+.ContactUs_Img {
   background-image: $teamPic4;
   opacity: 40%;
 
@@ -441,41 +390,40 @@ $drink3: url('../public/assets/images/drink3.jpeg');
   right: 0;
   bottom: 0;
 }
-.ContactUs_content { 
+
+.ContactUs_Content { 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
   background-color: $green_light3;
+  border: 1px solid $green_dark2;
 
   position: relative;
 }
 
-.contact_fieldset{
+.ContactUs_Fieldset{
   border: 1px solid $green_dark2;
 }
 
-.Header_element {
-  padding: 5px 10px 5px 10px;
+// .ContactUs_Title {
+//   border: 1px solid $green_light1;
+
+// }
+
+.Cart_Items {
+  overflow-y: auto;
 }
 
-.Header_element:hover{
-  background-color: $green_light3;
-}
 
-.OP_Body_Menu { 
-  background-color: $green_light3; 
+.order_btn {
+  background-color: $green_dark1;
+  color: white;
+}
+.Menu_Item {
   border: 1px solid $green_dark2;
-
-  .order_btn {
-    background-color: $green_dark1;
-    color: white;
-  }
-  .menu_item {
-    border: 1px solid $green_dark2;
-    background-color: $green_light2;
-  }
+  background-color: $green_light2;
 }
 
 // Animations
@@ -502,6 +450,7 @@ $drink3: url('../public/assets/images/drink3.jpeg');
   animation-duration: 200ms;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
+
   overflow: hidden;
 }
 
@@ -510,6 +459,7 @@ $drink3: url('../public/assets/images/drink3.jpeg');
   animation-duration: 200ms;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
+
   overflow: hidden;
 }
 
