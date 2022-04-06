@@ -4,11 +4,11 @@ import Footer from '../components/Footer';
 
 export default function HomePage(props){
 
-    const { setIsOpen, isOpen } = props
+    const { setIsOpen, isOpen, windowWidth } = props
 
     return (
         <div className="app">
-            <Header setIsOpen={ setIsOpen } isOpen={ isOpen } />
+            <Header setIsOpen={ setIsOpen } isOpen={ isOpen } windowWidth={windowWidth} />
             <div className="body_footer_wrapper ">
                 <Body />
                 <Footer />

@@ -2,7 +2,11 @@
 
 $min_height: 700px;
 
+$header_footer_maxHeight: 100%;
+$header_footer_minHeight: 80px;
+
 $header_footer_height: 80px;
+// $header_footer_height: 100%;
 
 $topBar_color: rgb(160, 255, 160);
 $text_color1: rgb(46, 134, 46);
@@ -46,14 +50,30 @@ $drink3: url('../public/assets/images/drink3.jpeg');
   border: 1px solid $green_dark1;
   background-color: $green_light2;
 
-  height: $header_footer_height;
+  max-height: $header_footer_maxHeight;
+  min-height: $header_footer_minHeight;
+  // max-height: $header_footer_height;
 
+  // display: flex;
+  // justify-content: space-between;
+}
+
+.OP_Header {
+  display: flex;
+  justify-content: space-between;
+
+  position: relative;
+}
+.OP_Footer{
   display: flex;
   justify-content: space-between;
 }
 
-.OP_Header {
-  position: relative;
+.HP_Header{
+
+}
+.HP_Footer{
+
 }
 
 .Footer{
@@ -63,12 +83,15 @@ $drink3: url('../public/assets/images/drink3.jpeg');
   height: $header_footer_height;
 
   display: flex;
-
   justify-content: center;
   align-items: center;
 }
 
-.Header_element, .footer-element{
+.Header_element{
+  // padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+}
+.footer-element{
   padding: 5px 10px 5px 10px;
   border-radius: 10px;
 }
@@ -353,7 +376,8 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 }
 
 .Logo_Header{
-  width: 15rem;
+  max-height: 75px;
+  // width: 15rem;
 }
 
 .Logo_Home{

@@ -4,7 +4,7 @@ import Logo from '../Logo'
 export default function Home() {
   return (
     <>
-      <div className="home_hero_parent">
+      <div className="home_hero_parent text-sm">
 
         <div className=" home_hero_children home_hero_child1_image"></div>
         <div className=" home_hero_children home_hero_child2_fade"></div>
@@ -13,8 +13,8 @@ export default function Home() {
           
           <Logo classes={'Logo_Home sm:max-w-full md:max-w-3xl'}/>
 
-          <h2 className="italic text-sm sm:text-2xl">Central Texas Vietnamese Food & Asian Fusion</h2>
-          <div className="description text-sm sm:text-lg" >
+          <h2 className="italic sm:text-2xl">Central Texas Vietnamese Food & Asian Fusion</h2>
+          <div className="description sm:text-lg" >
 
             <div className="locations " >
               <h2 className="text-center bg-1 " >Locations</h2>

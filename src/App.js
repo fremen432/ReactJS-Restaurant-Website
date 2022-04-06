@@ -1,11 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 import './App.scss';
 
 import HomePage from './pages/index.jsx'
 import OrderPage from './pages/Orderpage.jsx';
 
 function App() {
+  // let windowWidth = 0;
+  // window.addEventListener('resize', () => windowWidth = window.innerWidth)
+
+
   return (
     <div className="App">
         <Routes>

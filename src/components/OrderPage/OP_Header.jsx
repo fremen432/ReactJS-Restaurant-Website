@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { AiOutlineShoppingCart } from 'react-icons/ai'
+import { Link } from 'react-router-dom';
+
 
 import Cart from '../Cart';
 import Logo from '../Logo';
@@ -23,10 +25,13 @@ export default function Header(props) {
 
     return (
 
-        <div id="SECTION__Header" className="OP_Header Header ">
+        <div id="SECTION__Header" className="OP_Header ">
 
             {/* Logo */}
-            <Logo position='header' />
+
+            <Link className="Logo " to='/' >
+                <Logo classes='Logo_Header ' position='header' />
+            </Link>
 
             {/* Right icon */}
             <div className=" OP_Header_RightIcon">
