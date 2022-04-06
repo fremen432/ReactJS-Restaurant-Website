@@ -141,9 +141,10 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 }
 
 .home_hero_children{
+  position: absolute;
+
   height: calc(100vh - $header_footer_height);
   min-height: $min_height;
-  position: absolute;
 
   top:0%;
   bottom:0%;
@@ -169,6 +170,7 @@ $drink3: url('../public/assets/images/drink3.jpeg');
   display: flex;
   justify-content: center;
   align-items: center;
+
   flex-direction: column;
 }
 
@@ -176,6 +178,10 @@ $drink3: url('../public/assets/images/drink3.jpeg');
   margin-top: 1rem;
   margin-bottom: 1rem;
   width: 100%;
+}
+
+.locations-box{
+  border: 1px solid $green_dark2;
 }
 .hours {
   margin-bottom: 1rem;
@@ -351,7 +357,8 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 }
 
 .Logo_Home{
-  max-width: 50rem;
+  // max-width: 50rem;
+  // max-width: 100%;
 }
 
 .bg-1{
@@ -406,11 +413,6 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 .ContactUs_Fieldset{
   border: 1px solid $green_dark2;
 }
-
-// .ContactUs_Title {
-//   border: 1px solid $green_light1;
-
-// }
 
 .Cart_Items {
   overflow-y: auto;

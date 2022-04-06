@@ -43,7 +43,9 @@ export default function Header(props) {
     return (
         <div className="HP_Header">
 
-            <Logo position='header' />
+            <Link className="Logo  " to='/' >
+                <Logo classes='Logo_Header' />
+            </Link>
 
             <ul className="navbar_elements text-sm box sm:text-md mx-2 sm:mr-8">
                 <li><a className={Header__element + ''}  href="#Home">Home</a></li>

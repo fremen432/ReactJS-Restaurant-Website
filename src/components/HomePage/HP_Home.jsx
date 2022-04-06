@@ -11,21 +11,21 @@ export default function Home() {
 
         <div id="Home" className="home_hero_children home_hero_child3_textContent snap-element">
           
-          <Logo classes={'Logo_Home mx-4 '}/>
+          <Logo classes={'Logo_Home sm:max-w-full md:max-w-3xl'}/>
 
-          <h2 className="italic text-md box md:text-2xl">Central Texas Vietnamese Food & Asian Fusion</h2>
-          <div className="description" >
+          <h2 className="italic text-sm sm:text-2xl">Central Texas Vietnamese Food & Asian Fusion</h2>
+          <div className="description text-sm sm:text-lg" >
 
-            <div className="locations" >
+            <div className="locations " >
               <h2 className="text-center bg-1 " >Locations</h2>
 
               {locations.map(el => 
-                <div className=" flex flex-col justify-center items-center md:grid md:grid-cols-5 ">
+                <div className="flex flex-col justify-center items-center md:grid md:grid-cols-5 locations-box my-2 pl-2 p-1 rounded-lg">
                   <div className="col-div-1 text-center md:text-left">{el.name + ': '}</div>
                   <div className="col-span-3">{el.address}</div>
                   <a className="col-span-1" href="tel:+5555555555">{el.phone}</a>
                 </div>
-                )}
+              )}
 
             </div>
 
