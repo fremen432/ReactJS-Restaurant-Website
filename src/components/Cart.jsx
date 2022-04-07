@@ -8,6 +8,8 @@ export default function Cart(props) {
     const shippingPrice = itemsPrice > 2000 ? 0 : 0;
     const totalPrice = itemsPrice + taxPrice + shippingPrice;
 
+    const checkoutMessage = () => alert('Your order has been received. Thank you for dining with us!')
+
     return (
         <div className={` flex-col rounded-lg box ` + (
             headerORbody != 'header' ? 'BodyCart hidden sm:flex m-4 ml-0 rounded-lg ' :
@@ -88,10 +90,11 @@ export default function Cart(props) {
     
                 <div className="flex justify-center items-center">
                 <button className="Style_darkBtn m-1 " onClick={
-                    () => {
-                    let customersOrder = cartItems.map(el => ({ dish: el.name, qty: el.qty }))
-                    alert(JSON.stringify(customersOrder))
-                    }
+                    checkoutMessage
+                    // () => {
+                    // let customersOrder = cartItems.map(el => ({ dish: el.name, qty: el.qty }))
+                    // alert(JSON.stringify(customersOrder))
+                    // }
                 }>
                     Checkout
                 </button>
