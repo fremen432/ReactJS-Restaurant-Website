@@ -9,8 +9,7 @@ export default function Cart(props) {
     const totalPrice = itemsPrice + taxPrice + shippingPrice;
 
     return (
-        <div className={`flex-col rounded-lg box 
-        ` + (
+        <div className={` flex-col rounded-lg box ` + (
             headerORbody != 'header' ? 'BodyCart hidden sm:flex m-4 ml-0 rounded-lg ' :
 
             isOpen == false ? "HeaderCart sm:hidden animate_UP hidden" : 
@@ -36,7 +35,7 @@ export default function Cart(props) {
 
                 <div className="Cart_Items box my-1 rounded-lg">
                 {cartItems.map( item => (
-                    <div key={item.id} className="Cart_Items_Item box rounded-md p-1.5 pt-1">
+                    <div key={item.id} className="Cart_Items_Item  rounded-md p-1.5 pt-1">
                         <div className="col-2">{item.name}</div>
                         <div className="grid grid-cols-2 ">
                             <div className="">

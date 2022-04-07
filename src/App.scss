@@ -1,4 +1,4 @@
-// .box { border: 1px solid black}
+.box { border: 1px solid black}
 
 $min_height: 700px;
 
@@ -271,9 +271,12 @@ $drink3: url('../public/assets/images/drink3.jpeg');
   
   border: 1px solid $green_dark2;
   background-color: $green_light3;
-  max-height: $relativeVH;
 
   padding: 10px 10px;
+}
+
+.BodyCart{
+  max-height: $relativeVH;
 }
 
 .HeaderCart {
@@ -285,7 +288,9 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 
   margin-left: 20px;
   margin-right: 20px;
+
   overflow: auto;
+  max-height: 80vh;
 }
 
 .cartEmpty, .cartNotEmpty {
@@ -304,7 +309,7 @@ $drink3: url('../public/assets/images/drink3.jpeg');
   border: 1px solid $green_dark1;
   background-color: $green_dark1;
   overflow-y: auto;
-  max-height: 50vh;
+  max-height: 45vh;
 }
 
 .Cart_Items_Item {
