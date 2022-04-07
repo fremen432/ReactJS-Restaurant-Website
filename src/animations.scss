@@ -1,0 +1,111 @@
+$rollDown_height: 630px;
+
+// Animations
+.animate_DOWN {
+    animation-name: fade_IN, slide_DOWN, displayBlock;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  
+    overflow: hidden;
+  }
+  
+  .animate_UP {
+    animation-name: fade_OUT, slide_UP, displayHidden;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  
+    overflow: hidden;
+  }
+  
+  .roll_UP_animation {
+    animation-name: fade_OUT, roll_UP;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  
+    overflow: hidden;
+  }
+  
+  .roll_DOWN_animation {
+    animation-name: fade_IN, roll_DOWN;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  
+    overflow: hidden;
+  }
+  
+  @keyframes fade_IN {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade_OUT {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes slide_DOWN {
+    0% {
+      margin-top: -10px;
+    }
+    
+    100% {
+      margin-top: 0px;
+    }
+    
+  }
+  @keyframes slide_UP {
+    0% {
+      margin-top: 0px;
+    }
+    
+    100% {
+      margin-top: -10px;
+    }
+    
+  }
+  
+  @keyframes roll_DOWN {
+    0% {
+      max-height: 0px;
+    }
+    100% {
+      height: $rollDown_height;
+    }
+  }
+  @keyframes roll_UP {
+    0% {
+      height: $rollDown_height;
+  
+    }
+    100% {
+      max-height: 0px;
+    }
+  }
+  
+  @keyframes displayBlock {
+    0% {
+      display: hidden;
+    }
+    100% {
+      display: block;
+    }
+  }
+  @keyframes displayHidden {
+    0% {
+      display: block;
+    }
+    100% {
+      display: hidden;
+    }
+  }

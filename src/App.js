@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.scss';
+import './animations.scss';
 
 import HomePage from './pages/index.jsx'
 import OrderPage from './pages/Orderpage.jsx';

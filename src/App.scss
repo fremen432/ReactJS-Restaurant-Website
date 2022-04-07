@@ -369,6 +369,25 @@ $drink3: url('../public/assets/images/drink3.jpeg');
   padding-bottom: 5px;
 }
 
+.Dish_category{
+  // max-height: 500px;
+  // margin: 2px
+
+  // overflow-y: hidden;
+  // height: 100%;
+
+}
+.OP_Menu_Dishes{
+  // max-height: 300px;
+  // margin: 5px
+
+  // height: 500px;
+
+  // max-height: 50%;
+  // display: none;
+  // height: 100%;
+}
+
 .Logo {
   display: flex;
   justify-content: center;
@@ -452,112 +471,4 @@ $drink3: url('../public/assets/images/drink3.jpeg');
   background-color: $green_light2;
 }
 
-// Animations
-.animate_DOWN {
-  animation-name: fade_IN, slide_DOWN, displayBlock;
-  animation-duration: 200ms;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
 
-  overflow: hidden;
-}
-
-.animate_UP {
-  animation-name: fade_OUT, slide_UP, displayHidden;
-  animation-duration: 200ms;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-
-  overflow: hidden;
-}
-
-.roll_UP_animation {
-  animation-name: fade_OUT, roll_UP;
-  animation-duration: 200ms;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-
-  overflow: hidden;
-}
-
-.roll_DOWN_animation {
-  animation-name: fade_IN, roll_DOWN;
-  animation-duration: 200ms;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-
-  overflow: hidden;
-}
-
-@keyframes fade_IN {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fade_OUT {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes slide_DOWN {
-  0% {
-    margin-top: -10px;
-  }
-  
-  100% {
-    margin-top: 0px;
-  }
-  
-}
-@keyframes slide_UP {
-  0% {
-    margin-top: 0px;
-  }
-  
-  100% {
-    margin-top: -10px;
-  }
-  
-}
-
-@keyframes roll_DOWN {
-  0% {
-    max-height: 0px;
-  }
-  100% {
-    max-height: 500px;
-  }
-}
-@keyframes roll_UP {
-  0% {
-    max-height: 500px;
-
-  }
-  100% {
-    max-height: 0px;
-  }
-}
-
-@keyframes displayBlock {
-  0% {
-    display: hidden;
-  }
-  100% {
-    display: block;
-  }
-}
-@keyframes displayHidden {
-  0% {
-    display: block;
-  }
-  100% {
-    display: hidden;
-  }
-}

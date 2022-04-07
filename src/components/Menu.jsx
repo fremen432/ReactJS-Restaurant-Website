@@ -39,9 +39,14 @@ function DishCategory(props) {
   }
 
   return(
-    <div className={"m-2 shadow-lg rounded-lg "}>
-      <h2 className={"Menu_Title text-center rounded-lg " + (page =='HomePage' ? '' : 'cursor-pointer ')} onClick={page =='HomePage' ? '' : toggleHidden} >{categoryTitle}</h2>
-      <div className={"OP_Menu_Dishes " + (
+    <div className={" Dish_category box m-2 shadow-lg rounded-lg "}>
+
+      <h2 
+      className={"Menu_Title text-center rounded-lg " +  (page =='HomePage' ? '' : 'cursor-pointer ')} 
+      onClick={page =='HomePage' ? '' : toggleHidden} >{categoryTitle}</h2>
+
+      <div 
+      className={"OP_Menu_Dishes box " + (
         page == 'HomePage' ? 'block' :
 
         isHidden == true ? 'roll_DOWN_animation ':
@@ -62,21 +67,25 @@ export default function Menu(props) {
   const { onAdd, page } = props;
 
   return (
-    <div id="Menu" className="
+    <div id="Menu" 
+    className="
     Menu_Component
     box 
     rounded-lg
     shadow-lg
 
     col-span-2 
-    m-4">
+    m-4"
+    >
 
       {/* Menu Categories */}
-      <div className="
+      <div 
+      className="
       grid xl:grid-cols-3 
       lg:grid-cols-2 
       md:grid-cols-1
-      ">
+      "
+      >
 
         {/* Returns h1 with all category and respective menu items inside */}
         {sortedMenu.map( arr => 
