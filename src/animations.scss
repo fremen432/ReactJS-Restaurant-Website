@@ -1,4 +1,5 @@
-$rollDown_height: 630px;
+// $rollDown_height: 630px;
+$rollDown_height: 1000px;
 
 // Animations
 .animate_DOWN {
@@ -80,12 +81,12 @@ $rollDown_height: 630px;
       max-height: 0px;
     }
     100% {
-      height: $rollDown_height;
+      max-height: $rollDown_height;
     }
   }
   @keyframes roll_UP {
     0% {
-      height: $rollDown_height;
+      max-height: $rollDown_height;
   
     }
     100% {

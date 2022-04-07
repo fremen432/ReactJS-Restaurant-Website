@@ -1,4 +1,4 @@
-.box { border: 1px solid black}
+// .box { border: 1px solid black}
 
 $min_height: 700px;
 
@@ -277,6 +277,7 @@ $drink3: url('../public/assets/images/drink3.jpeg');
 
 .BodyCart{
   max-height: $relativeVH;
+  // max-height: 80vh;
 }
 
 .HeaderCart {
