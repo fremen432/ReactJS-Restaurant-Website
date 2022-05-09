@@ -25,13 +25,13 @@ yarn-error.log*
 # .env
 
 package copy.json
-package-lock.json
+# package-lock.json
 
 reference.txt
 reference copy.txt
 
-craco.config.js
-craco.config copy.js
+# craco.config.js
+# craco.config copy.js
 
 postcss.config.js
 postcss.config copy.js
