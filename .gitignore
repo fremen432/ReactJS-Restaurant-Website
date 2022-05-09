@@ -23,5 +23,10 @@ yarn-debug.log*
 yarn-error.log*
 
 reference.txt
+reference copy.txt
 # .env
 package-lock.json
+craco.config copy.js
+postcss.config.js
+postcss.config copy.js
+tailwind.config copy.js
