@@ -36,5 +36,5 @@ craco.config copy.js
 postcss.config.js
 postcss.config copy.js
 
-tailwind.config.js
-tailwind.config copy.js
+# tailwind.config.js
+# tailwind.config copy.js
