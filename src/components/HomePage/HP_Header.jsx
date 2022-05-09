@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import Logo from '../Logo';
 
 const Header__element = 'Header_element px-2 py-1 box sm:mx-1'
-// const Header__element = 'p '
-const hi = () => console.log(window.innerWidth)
 
 const DropDown = (props) => {
     const [isOpen, setIsOpen] = useState('start');
@@ -46,7 +44,7 @@ export default function Header(props) {
         <div className="HP_Header flex justify-between text-sm ">
 
             <Link className="Logo " to='/' >
-                <Logo classes='Logo_Header  ' position='header' windowWidth={windowWidth}/>
+                <Logo classes='Logo_Header ' position='header' windowWidth={windowWidth}/>
             </Link>
 
             <ul className="navbar_elements sm:text-md sm:mx-2 sm:mr-8 box ">

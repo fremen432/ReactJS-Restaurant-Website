@@ -2,11 +2,12 @@ import { useState } from 'react';
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { Link } from 'react-router-dom';
 
-
 import Cart from '../Cart';
 import Logo from '../Logo';
 
 export default function Header(props) {
+
+    const { products, cartItems, onAdd, onRemove } = props;   
 
     const [isOpen, setIsOpen] = useState('start');
 
@@ -15,8 +16,6 @@ export default function Header(props) {
         isOpen == true ? setIsOpen(false) :
         setIsOpen(true)
     }
-
-    const { products, cartItems, onAdd, onRemove } = props;   
 
     const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
     const taxPrice = itemsPrice * 0.14;

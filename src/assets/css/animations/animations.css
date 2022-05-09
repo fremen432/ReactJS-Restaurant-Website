@@ -1,0 +1,192 @@
+.animate_DOWN {
+  -webkit-animation-name: fade_IN, slide_DOWN, displayBlock;
+          animation-name: fade_IN, slide_DOWN, displayBlock;
+  -webkit-animation-duration: 200ms;
+          animation-duration: 200ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  overflow: hidden;
+}
+
+.animate_UP {
+  -webkit-animation-name: fade_OUT, slide_UP, displayHidden;
+          animation-name: fade_OUT, slide_UP, displayHidden;
+  -webkit-animation-duration: 200ms;
+          animation-duration: 200ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  overflow: hidden;
+}
+
+.roll_UP_animation {
+  -webkit-animation-name: fade_OUT, roll_UP;
+          animation-name: fade_OUT, roll_UP;
+  -webkit-animation-duration: 200ms;
+          animation-duration: 200ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  overflow: hidden;
+}
+
+.roll_DOWN_animation {
+  -webkit-animation-name: fade_IN, roll_DOWN;
+          animation-name: fade_IN, roll_DOWN;
+  -webkit-animation-duration: 200ms;
+          animation-duration: 200ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  overflow: hidden;
+}
+
+@-webkit-keyframes fade_IN {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade_IN {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade_OUT {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade_OUT {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slide_DOWN {
+  0% {
+    margin-top: -10px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+
+@keyframes slide_DOWN {
+  0% {
+    margin-top: -10px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+
+@-webkit-keyframes slide_UP {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -10px;
+  }
+}
+
+@keyframes slide_UP {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -10px;
+  }
+}
+
+@-webkit-keyframes roll_DOWN {
+  0% {
+    max-height: 0px;
+  }
+  100% {
+    max-height: 1000px;
+  }
+}
+
+@keyframes roll_DOWN {
+  0% {
+    max-height: 0px;
+  }
+  100% {
+    max-height: 1000px;
+  }
+}
+
+@-webkit-keyframes roll_UP {
+  0% {
+    max-height: 1000px;
+  }
+  100% {
+    max-height: 0px;
+  }
+}
+
+@keyframes roll_UP {
+  0% {
+    max-height: 1000px;
+  }
+  100% {
+    max-height: 0px;
+  }
+}
+
+@-webkit-keyframes displayBlock {
+  0% {
+    display: hidden;
+  }
+  100% {
+    display: block;
+  }
+}
+
+@keyframes displayBlock {
+  0% {
+    display: hidden;
+  }
+  100% {
+    display: block;
+  }
+}
+
+@-webkit-keyframes displayHidden {
+  0% {
+    display: block;
+  }
+  100% {
+    display: hidden;
+  }
+}
+
+@keyframes displayHidden {
+  0% {
+    display: block;
+  }
+  100% {
+    display: hidden;
+  }
+}
+/*# sourceMappingURL=animations.css.map */
