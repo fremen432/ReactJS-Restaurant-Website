@@ -24,7 +24,7 @@ export default function NavLinks({ headerOrFooter }) {
 	};
 
 	return (
-		<div className="navbar_elements sm:text-md sm:mx-2 sm:mr-8 box ">
+		<div className="navbar_elements sm:text-md sm:mx-2 sm:mr-8 ">
 			{routes.map((el) => (
 				<a className={Header__element + ""} href={el.to}>
 					{el.name}
@@ -53,13 +53,13 @@ export default function NavLinks({ headerOrFooter }) {
 										: "hidden "
 								}`}
 					>
-						<Link className="location-link box" to="/order">
+						<Link className="location-link box" to="/Order">
 							Dripping Springs
 						</Link>
-						<Link className="location-link box" to="/order">
+						<Link className="location-link box" to="/Order">
 							Bee Cave
 						</Link>
-						<Link className="location-link box" to="/order">
+						<Link className="location-link box" to="/Order">
 							Marble Falls
 						</Link>
 					</ul>
