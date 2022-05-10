@@ -9,20 +9,24 @@ export default function Cart(props) {
 	const totalPrice = itemsPrice + taxPrice + shippingPrice;
 
 	const checkoutMessage = () =>
-		alert("Your order has been received. Thank you for dining with us!");
+		alert(
+			`Your order has been received. Your total is $${totalPrice}. Thank you for dining with us!`
+		);
 
 	return (
 		<div
-			className={
-				` flex-col rounded-lg box ` +
-				(headerORbody != "header"
+			className={`flex-col rounded-lg box ${
+				headerORbody !== "Header"
 					? "BodyCart hidden sm:flex m-4 ml-0 rounded-lg "
-					: isOpen == false
-					? "HeaderCart sm:hidden animate_UP hidden"
-					: isOpen == true
-					? "HeaderCart sm:hidden animate_DOWN block"
-					: "HeaderCart hidden")
-			}
+					: "HeaderCart sm:hidden "
+			} 
+			${
+				isOpen === false
+					? "hidden"
+					: isOpen === true
+					? "animate_DOWN flex"
+					: "hidden "
+			}`}
 		>
 			{/* Cart Header */}
 			<div

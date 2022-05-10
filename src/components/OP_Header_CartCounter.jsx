@@ -17,6 +17,8 @@ export default function OP_Header_CartCounter({
 
 	const isOpen_Toggle = () => {
 		setIsOpen(isOpen === true ? false : true);
+		// setIsOpen(isOpen === false ? true : false);
+		console.log(isOpen);
 	};
 
 	return (
@@ -44,7 +46,7 @@ export default function OP_Header_CartCounter({
 				onAdd={onAdd}
 				onRemove={onRemove}
 				isOpen={isOpen}
-				headerORbody={"header"}
+				headerORbody={"Header"}
 			/>
 		</div>
 	);

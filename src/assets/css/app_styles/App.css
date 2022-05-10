@@ -291,9 +291,11 @@
   z-index: 1;
   left: 0;
   right: 0;
+  bottom: -100vh;
+  top: var(--header_footer_height);
   margin-left: 20px;
   margin-right: 20px;
-  overflow: auto;
+  overflow: hidden;
   max-height: 80vh;
 }
 
@@ -316,8 +318,7 @@
 .Cart_Items {
   border: 1px solid var(--green_dark1);
   background-color: var(--green_dark1);
-  overflow-y: auto;
-  max-height: 45vh;
+  overflow-y: scroll;
 }
 
 .Cart_Items_Item {
