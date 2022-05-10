@@ -1,6 +1,6 @@
 // import Header from "../components/HomePage/HP_Header";
 import Header from "../components/Header";
-import Body from "../components/HomePage/HP_Body";
+import Body from "../components/HP_Body";
 import Footer from "../components/Footer";
 
 export default function HomePage(props) {

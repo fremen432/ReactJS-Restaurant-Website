@@ -1,6 +1,6 @@
-import Home from "./HP_Home";
-import Contact from "./HP_Contact";
-import Menu from "../Menu";
+import Home from "./Hero";
+import Menu from "./Menu";
+import Contact from "./Contact";
 
 export default function Body() {
 	return (

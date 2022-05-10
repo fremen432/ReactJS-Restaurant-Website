@@ -1,5 +1,5 @@
-import { hours, locations } from "../../assets/js/Data.js";
-import Logo from "../Logo";
+import { hours, locations } from "../assets/js/Data.js";
+import Logo from "./Logo";
 
 export default function Home() {
 	return (
