@@ -9,6 +9,7 @@ import Cart from "../components/Cart";
 import { menu } from "../assets/js/Data";
 
 export default function OrderPage() {
+	const blank = "";
 	const products = menu;
 
 	const [cartItems, setCartItems] = useState([]);
