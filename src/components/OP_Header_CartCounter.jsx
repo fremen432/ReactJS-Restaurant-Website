@@ -20,7 +20,7 @@ export default function OP_Header_CartCounter({
 	};
 
 	return (
-		<div className=" OP_Header_RightIcon">
+		<div className="OP_Header_RightIcon ">
 			<button
 				onClick={isOpen_Toggle}
 				className="OP_Header_RightIcon_Button flex justify-center items-center sm:hidden m-5 p-1 pr-0 box rounded"

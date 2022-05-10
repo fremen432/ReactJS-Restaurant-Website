@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Header from "../components/OrderPage/OP_Header";
+import Header from "../components/Header";
 import Body from "../components/OrderPage/OP_Body";
 import Footer from "../components/Footer";
 
@@ -73,6 +73,7 @@ export default function OrderHomepage() {
 	return (
 		<div className="OrderPage faded">
 			<Header
+				page="OrderPage"
 				products={products}
 				cartItems={cartItems}
 				onAdd={onAdd}
