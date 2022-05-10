@@ -8,7 +8,7 @@ import Cart from "../components/Cart";
 
 import { menu } from "../assets/js/Data";
 
-export default function OrderHomepage() {
+export default function OrderPage() {
 	const products = menu;
 
 	const [cartItems, setCartItems] = useState([]);
@@ -39,26 +39,32 @@ export default function OrderHomepage() {
 	};
 
 	return (
-		<div className="OrderPage faded">
-			<Header
-				page="OrderPage"
-				products={products}
-				cartItems={cartItems}
-				onAdd={onAdd}
-				onRemove={onRemove}
-			/>
-			<div className="body_footer_wrapper ">
-				<div id="SECTION__Body" className="sm:grid sm:grid-cols-3">
-					<Menu products={products} onAdd={onAdd} page="OrderPage" />
-					<Cart
-						products={products}
-						cartItems={cartItems}
-						onAdd={onAdd}
-						onRemove={onRemove}
-					/>
+		<>
+			<div className="OrderPage faded">
+				<Header
+					page="OrderPage"
+					products={products}
+					cartItems={cartItems}
+					onAdd={onAdd}
+					onRemove={onRemove}
+				/>
+				<div className="body_footer_wrapper ">
+					<div id="SECTION__Body" className="sm:grid sm:grid-cols-3">
+						<Menu
+							products={products}
+							onAdd={onAdd}
+							page="OrderPage"
+						/>
+						<Cart
+							products={products}
+							cartItems={cartItems}
+							onAdd={onAdd}
+							onRemove={onRemove}
+						/>
+					</div>
+					<Footer />
 				</div>
-				<Footer />
 			</div>
-		</div>
+		</>
 	);
 }
