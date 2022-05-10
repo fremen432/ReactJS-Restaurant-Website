@@ -1,7 +1,7 @@
 import { hours, locations } from "../assets/js/Data.js";
 import Logo from "./Logo";
 
-export default function Home() {
+export default function Hero() {
 	return (
 		<>
 			<div className="home_hero_parent text-sm">

@@ -1,8 +1,10 @@
 import { useState } from "react";
 
 import Header from "../components/Header";
-import Body from "../components/OP_Body";
 import Footer from "../components/Footer";
+
+import Menu from "../components/Menu";
+import Cart from "../components/Cart";
 
 import { menu } from "../assets/js/Data";
 
@@ -80,12 +82,15 @@ export default function OrderHomepage() {
 				onRemove={onRemove}
 			/>
 			<div className="body_footer_wrapper ">
-				<Body
-					products={products}
-					cartItems={cartItems}
-					onAdd={onAdd}
-					onRemove={onRemove}
-				/>
+				<div id="SECTION__Body" className="sm:grid sm:grid-cols-3">
+					<Menu products={products} onAdd={onAdd} page="OrderPage" />
+					<Cart
+						products={products}
+						cartItems={cartItems}
+						onAdd={onAdd}
+						onRemove={onRemove}
+					/>
+				</div>
 				<Footer />
 			</div>
 		</div>

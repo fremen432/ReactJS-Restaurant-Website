@@ -1,7 +1,9 @@
-// import Header from "../components/HomePage/HP_Header";
 import Header from "../components/Header";
-import Body from "../components/HP_Body";
 import Footer from "../components/Footer";
+
+import Hero from "../components/Hero";
+import Menu from "../components/Menu";
+import Contact from "../components/Contact";
 
 export default function HomePage(props) {
 	const { setIsOpen, isOpen, windowWidth } = props;
@@ -15,7 +17,9 @@ export default function HomePage(props) {
 				windowWidth={windowWidth}
 			/>
 			<div className="body_footer_wrapper ">
-				<Body />
+				<Hero />
+				<Menu page="HomePage" />
+				<Contact />
 				<Footer />
 			</div>
 		</div>
