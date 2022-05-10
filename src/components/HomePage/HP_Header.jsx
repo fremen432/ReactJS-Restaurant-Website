@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 import Logo from "../Logo";
 
-const Header__element = "Header_element px-2 py-1 box sm:mx-1";
+const Header__element = "Header px-2 py-1 box sm:mx-1";
 
 const DropDown = (props) => {
 	const [isOpen, setIsOpen] = useState("start");
 	const isOpen_Toggle = () => {
-		setIsOpen(isOpen == false ? true : isOpen == true ? false : true);
+		setIsOpen((isOpen) => !isOpen);
 	};
 
 	document.onclick = (e) => {
