@@ -50,11 +50,11 @@ export default function Cart(props) {
 
 			{/* Cart Items */}
 			{cartItems.length >= 1 && (
-				<div className="Cart_Items box my-1 rounded-lg">
+				<div className="CartItems box my-1 rounded-lg">
 					{cartItems.map((item) => (
 						<div
 							key={item.id}
-							className="Cart_Items_Item  rounded-md p-1.5 pt-1"
+							className="Item rounded-md p-1.5 pt-1"
 						>
 							<div className="col-2">{item.name}</div>
 							<div className="grid grid-cols-2 ">
@@ -122,13 +122,7 @@ export default function Cart(props) {
 					<div className="flex justify-center items-center">
 						<button
 							className="Style_darkBtn m-1 "
-							onClick={
-								checkoutMessage
-								// () => {
-								// let customersOrder = cartItems.map(el => ({ dish: el.name, qty: el.qty }))
-								// alert(JSON.stringify(customersOrder))
-								// }
-							}
+							onClick={checkoutMessage}
 						>
 							Checkout
 						</button>

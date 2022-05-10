@@ -118,17 +118,12 @@
           align-items: center;
 }
 
-.navbar_elements li a {
-  color: black;
-  text-decoration: none;
-}
-
-.dropdown {
+.navbar_elements .dropdown {
   position: relative;
   display: inline-block;
 }
 
-.dropdown-content {
+.navbar_elements .dropdown .dropdown-content {
   position: absolute;
   left: -95px;
   right: 5px;
@@ -141,14 +136,14 @@
   z-index: 1;
 }
 
-.location-link {
+.navbar_elements .dropdown .dropdown-content .location-link {
   padding: 5px;
   width: 100%;
   display: inline-block;
   border-radius: 5px;
 }
 
-.location-link:hover {
+.navbar_elements .dropdown .dropdown-content .location-link:hover {
   background-color: var(--green_light2);
 }
 
@@ -299,8 +294,12 @@
   max-height: 80vh;
 }
 
-.cartEmpty,
-.cartNotEmpty {
+.Cart_Header {
+  background-color: var(--green_light2);
+}
+
+.Cart_Header .cartEmpty,
+.Cart_Header .cartNotEmpty {
   border: 1px solid var(--green_dark1);
   width: 100%;
   display: -webkit-box;
@@ -311,19 +310,25 @@
           justify-content: center;
 }
 
-.Cart_Header {
-  background-color: var(--green_light2);
-}
-
-.Cart_Items {
+.CartItems {
   border: 1px solid var(--green_dark1);
   background-color: var(--green_dark1);
   overflow-y: scroll;
 }
 
-.Cart_Items_Item {
+.CartItems .Item {
   margin: 0.5rem;
   background-color: var(--green_light3);
+}
+
+.CartItems .Item .minusBtn,
+.CartItems .Item .plusBtn {
+  background-color: var(--green_dark1);
+  color: white;
+  margin-right: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .Cart_Total {
@@ -331,29 +336,19 @@
   background-color: var(--green_light2);
 }
 
-.horizontal_line {
-  background-color: var(--green_dark2);
-  height: 2px;
-}
-
-.TotalPrice {
+.Cart_Total .TotalPrice {
   background-color: var(--BG_totalPrice);
   border: 2px solid black;
+}
+
+.Cart_Total .horizontal_line {
+  background-color: var(--green_dark2);
+  height: 2px;
 }
 
 .CheckoutBtn {
   background-color: var(--green_dark1);
   color: white;
-}
-
-.minusBtn,
-.plusBtn {
-  background-color: var(--green_dark1);
-  color: white;
-  margin-right: 0.25rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  border-radius: 0.5rem;
 }
 
 .Style_darkBtn {
@@ -455,10 +450,6 @@
 .ContactUs_Wrapper .ContactUs_Content .ContactUs_Form fieldset .contact-submit {
   background-color: var(--green_dark1);
   color: white;
-}
-
-.Cart_Items {
-  overflow-y: auto;
 }
 
 .order_btn {
