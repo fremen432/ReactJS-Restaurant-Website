@@ -39,6 +39,12 @@
 	--drink3: url("/src/assets/images/drink3.jpeg");
 }
 
+.Order_Page {
+}
+
+.Home_Page {
+}
+
 .cbm-green {
 	background-color: rgb(160, 255, 160);
 }
@@ -58,7 +64,6 @@
 .OP_Footer,
 .HP_Header,
 .HP_Footer .Footer {
-	// border: 1px solid var(--green_dark1);
 	border: 1px solid rgb(0, 71, 0);
 	background-color: var(--green_light2);
 
@@ -89,7 +94,6 @@
 }
 
 .Header_element {
-	// padding: 5px 10px 5px 10px;
 	border-radius: 10px;
 }
 .footer-element {
@@ -163,6 +167,7 @@
 }
 
 .home_hero_parent {
+	height: 1000px;
 	position: relative;
 }
 
