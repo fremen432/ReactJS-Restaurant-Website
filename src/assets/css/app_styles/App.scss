@@ -1,4 +1,6 @@
-// .box { border: 1px solid black}
+.box {
+	border: 1px solid black;
+}
 
 * {
 	--min_height: 700px;
@@ -12,6 +14,11 @@
 	--text_color1: rgb(46, 134, 46);
 	--relativeVH: calc(95vh - var(--header_footer_height));
 
+	--section_top_height: calc(95vh - var(--header_footer_height));
+	--section_bottom_height: calc(
+		95vh - var(--header_footer_height) - var(--header_footer_height)
+	);
+
 	--green_dark1: rgb(0, 71, 0);
 	--green_dark2: rgb(0, 117, 0);
 	--green_dark3: rgb(1, 163, 1);
@@ -19,6 +26,8 @@
 	--green_light1: rgb(107, 238, 107);
 	--green_light2: rgb(205, 255, 205);
 	--green_light3: rgb(238, 255, 238);
+
+	--BG_totalPrice: rgb(255, 238, 0);
 
 	// Images
 	--insideStore1: url("../../images/insideStore1.jpeg");
@@ -49,9 +58,6 @@
 }
 
 .HomePage {
-	.Header {
-		border-radius: 10px;
-	}
 }
 
 .Footer {
@@ -70,7 +76,7 @@
 	border-radius: 10px;
 }
 
-.Header:hover,
+.Header_Link:hover,
 .footer-element:hover {
 	background-color: var(--green_light3);
 }
@@ -84,8 +90,7 @@
 	min-height: var(--header_footer_minHeight);
 }
 
-.cbm-green {
-	background-color: rgb(160, 255, 160);
+.Header_Link {
 }
 
 .flex-center {
@@ -132,7 +137,6 @@
 	left: -45px;
 	top: 35px;
 
-	// background-color: rgba(255, 255, 255);
 	background-color: white;
 	min-width: 140px;
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -140,15 +144,15 @@
 	z-index: 1;
 }
 
-.dropdown-location {
+.location-link {
 	padding: 5px;
 	width: 100%;
 	display: inline-block;
 	border-radius: 5px;
-}
 
-.dropdown-location:hover {
-	background-color: var(--green_light2);
+	&:hover {
+		background-color: var(--green_light2);
+	}
 }
 
 .snap-type-y {
@@ -262,7 +266,7 @@
 }
 
 .Total_Price {
-	background-color: rgb(255, 238, 0);
+	background-color: var(--BG_totalPrice);
 	border: 2px solid black;
 }
 .Total_Btn {
@@ -332,7 +336,7 @@
 	height: 2px;
 }
 .TotalPrice {
-	background-color: rgb(255, 246, 125);
+	background-color: var(--BG_totalPrice);
 	border: 2px solid black;
 }
 .CheckoutBtn {
@@ -351,11 +355,6 @@
 	padding-right: 0.5rem;
 
 	border-radius: 0.5rem;
-}
-
-.contact-submit {
-	background-color: var(--green_dark1);
-	color: white;
 }
 
 .Style_darkBtn {
@@ -413,35 +412,44 @@
 		100vh - var(--header_footer_height) - var(--header_footer_height)
 	);
 	min-height: 350px;
-}
 
-.ContactUs_Img {
-	background-image: var(--teamPic4);
-	opacity: 40%;
+	.ContactUs_Img {
+		background-image: var(--teamPic4);
+		opacity: 40%;
 
-	position: absolute;
-	background-size: cover;
+		position: absolute;
+		background-size: cover;
 
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-}
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+	}
+	.ContactUs_Content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
 
-.ContactUs_Content {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+		background-color: var(--green_light3);
+		border: 1px solid var(--green_dark2);
 
-	background-color: var(--green_light3);
-	border: 1px solid var(--green_dark2);
+		position: relative;
 
-	position: relative;
-}
+		.ContactUs_Title {
+		}
 
-.ContactUs_Fieldset {
-	border: 1px solid var(--green_dark2);
+		.ContactUs_Form {
+			fieldset {
+				border: 1px solid var(--green_dark2);
+
+				.contact-submit {
+					background-color: var(--green_dark1);
+					color: white;
+				}
+			}
+		}
+	}
 }
 
 .Cart_Items {
@@ -455,4 +463,9 @@
 .Menu_Item {
 	border: 1px solid var(--green_dark2);
 	background-color: var(--green_light2);
+}
+
+.BTN_SubmitGreen {
+	background-color: var(--green_dark1);
+	color: white;
 }
