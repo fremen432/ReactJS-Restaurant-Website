@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -15,29 +15,31 @@ export default function OrderPage() {
 
 	const onAdd = (newItem) => {
 		const exist = cartItems.find((item) => item.id === newItem.id);
-		exist
-			? setCartItems(
-					cartItems.map((item) =>
-						item.id === newItem.id
-							? { ...exist, qty: exist.qty + 1 }
-							: item
-					)
-			  )
-			: setCartItems([...cartItems, { ...newItem, qty: 1 }]);
+		if (exist) {
+			setCartItems(
+				cartItems.map((item) =>
+					item.id === newItem.id
+						? { ...exist, qty: exist.qty + 1 }
+						: item
+				)
+			);
+		} else {
+			setCartItems([...cartItems, { ...newItem, qty: 1 }]);
+		}
 	};
 	const onRemove = (newItem) => {
 		const exist = cartItems.find((item) => item.id === newItem.id);
-		exist.qty === 1
-			? setCartItems(cartItems.filter((item) => item.id !== newItem.id))
-			: setCartItems(
-					cartItems.map((item) =>
-						item.id === newItem.id
-							? { ...exist, qty: exist.qty - 1 }
-							: item
-					)
-			  );
+		if (exist.qty === 1) {
+			setCartItems(cartItems.filter((item) => item.id !== newItem.id));
+		} else
+			setCartItems(
+				cartItems.map((item) =>
+					item.id === newItem.id
+						? { ...exist, qty: exist.qty - 1 }
+						: item
+				)
+			);
 	};
-
 	return (
 		<>
 			<div className="OrderPage faded">
