@@ -9,10 +9,10 @@ export default function Header(props) {
 	const { page, products, cartItems, onAdd, onRemove, windowWidth } = props;
 
 	return (
-		<div className="Header flex justify-between text-sm ">
-			<Link className="Logo " to="/">
+		<div className="Header flex items-center justify-between text-sm ">
+			<Link className="Logo  " to="/">
 				<Logo
-					classes="Logo_Header "
+					classes="Logo_Header w-32 sm:w-full"
 					position="header"
 					windowWidth={windowWidth}
 				/>

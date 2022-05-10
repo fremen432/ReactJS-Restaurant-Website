@@ -1,6 +1,6 @@
-.box {
-	border: 1px solid black;
-}
+// .box {
+// 	border: 1px solid black;
+// }
 
 * {
 	--min_height: 700px;
@@ -91,6 +91,7 @@
 }
 
 .Header_Link {
+	border-radius: 5px;
 }
 
 .flex-center {
@@ -101,7 +102,7 @@
 
 .body_footer_wrapper {
 	max-height: calc(100vh - var(--header_footer_height));
-	overflow-y: auto;
+	overflow-y: scroll;
 }
 
 .OP_Header_RightIcon_Button {
@@ -120,6 +121,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	// border-radius: 5px;
 }
 
 .navbar_elements li a {
@@ -134,8 +136,11 @@
 
 .dropdown-content {
 	position: absolute;
-	left: -45px;
+	left: -95px;
+	right: 5px;
 	top: 35px;
+	// left: 0;
+	// top: 0;
 
 	background-color: white;
 	min-width: 140px;
@@ -164,42 +169,46 @@
 }
 
 .home_hero_parent {
-	height: 1000px;
+	// height: 2000px;
+	// min-height: 3000px;
+	// height: 1000px;
 	position: relative;
-}
 
-.home_hero_children {
-	position: absolute;
+	.home_hero_children {
+		position: absolute;
 
-	height: calc(100vh - var(--header_footer_height));
-	min-height: var(min_height);
+		// max-height: calc(100vh - var(--header_footer_height));
+		height: calc(100vh - var(--header_footer_height));
+		// height: 100vh;
+		min-height: 600px;
+		// min-height: var(min_height);
 
-	top: 0%;
-	bottom: 0%;
-	left: 0%;
-	right: 0%;
+		top: 0%;
+		bottom: 0%;
+		left: 0%;
+		right: 0%;
 
-	overflow: hidden;
-}
+		overflow: hidden;
+	}
+	.home_hero_child1_image {
+		background-image: var(--insideStore2);
+		background-position: 80%;
+		background-size: cover;
+	}
 
-.home_hero_child1_image {
-	background-image: var(--insideStore2);
-	background-position: 80%;
-	background-size: cover;
-}
+	.home_hero_child2_fade {
+		background-color: var(--green_light3);
+		opacity: 70%;
+		position: relative;
+	}
 
-.home_hero_child2_fade {
-	background-color: var(--green_light3);
-	opacity: 70%;
-	position: relative;
-}
+	.home_hero_child3_textContent {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-.home_hero_child3_textContent {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	flex-direction: column;
+		flex-direction: column;
+	}
 }
 
 .locations {
@@ -379,7 +388,7 @@
 }
 
 .Logo {
-	display: flex;
+	// display: flex;
 	justify-content: center;
 	align-items: center;
 }

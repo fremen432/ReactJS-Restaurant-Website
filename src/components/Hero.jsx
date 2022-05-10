@@ -10,9 +10,9 @@ export default function Hero() {
 
 				<div
 					id="Home"
-					className="home_hero_children home_hero_child3_textContent snap-element"
+					className="home_hero_children home_hero_child3_textContent snap-element "
 				>
-					<Logo classes={"Logo_Home sm:max-w-full md:max-w-3xl"} />
+					<Logo classes="Logo_Home sm:max-w-full md:max-w-3xl" />
 
 					<h2 className="italic sm:text-2xl">
 						Central Texas Vietnamese Food & Asian Fusion

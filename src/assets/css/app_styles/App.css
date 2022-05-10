@@ -1,7 +1,3 @@
-.box {
-  border: 1px solid black;
-}
-
 * {
   --min_height: 700px;
   --header_footer_maxHeight: 100%;
@@ -78,6 +74,10 @@
   min-height: var(--header_footer_minHeight);
 }
 
+.Header_Link {
+  border-radius: 5px;
+}
+
 .flex-center {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -92,7 +92,7 @@
 
 .body_footer_wrapper {
   max-height: calc(100vh - var(--header_footer_height));
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 .OP_Header_RightIcon_Button {
@@ -130,7 +130,8 @@
 
 .dropdown-content {
   position: absolute;
-  left: -45px;
+  left: -95px;
+  right: 5px;
   top: 35px;
   background-color: white;
   min-width: 140px;
@@ -161,14 +162,13 @@
 }
 
 .home_hero_parent {
-  height: 1000px;
   position: relative;
 }
 
-.home_hero_children {
+.home_hero_parent .home_hero_children {
   position: absolute;
   height: calc(100vh - var(--header_footer_height));
-  min-height: var(min_height);
+  min-height: 600px;
   top: 0%;
   bottom: 0%;
   left: 0%;
@@ -176,19 +176,19 @@
   overflow: hidden;
 }
 
-.home_hero_child1_image {
+.home_hero_parent .home_hero_child1_image {
   background-image: var(--insideStore2);
   background-position: 80%;
   background-size: cover;
 }
 
-.home_hero_child2_fade {
+.home_hero_parent .home_hero_child2_fade {
   background-color: var(--green_light3);
   opacity: 70%;
   position: relative;
 }
 
-.home_hero_child3_textContent {
+.home_hero_parent .home_hero_child3_textContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -376,9 +376,6 @@
 }
 
 .Logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

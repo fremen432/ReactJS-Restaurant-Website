@@ -7,7 +7,7 @@ import OrderPage from "./pages/OrderPage.jsx";
 
 function App() {
 	return (
-		<div className="App">
+		<div className="App ">
 			<Routes>
 				<Route exact path="/" element={<HomePage />} />
 				<Route exact path="/order" element={<OrderPage />} />

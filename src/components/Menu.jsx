@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import { sortedMenu } from "../assets/js/Data";
-import Dish from "./Dish";
 import DishCategory from "./DishCategory";
 
-export default function Menu(props) {
-	const { onAdd, page } = props;
-
+export default function Menu({ onAdd, page }) {
 	return (
 		<div
 			id="Menu"
